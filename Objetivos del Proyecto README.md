@@ -1,6 +1,6 @@
 # grupo_12_vendiendomusica
 
-El objetivo del grupo es la creacion de una pagina web para la comecializacion de instrumentos/insumos y productos musicales orientandonos principalmente al cliente minorista: 
+El objetivo del grupo es la creacion de una pagina web para la comecializacion de instrumentos/insumos y productos musicales orientandonos principalmente al cliente minorista. 
 Ej: <br>
     - personas particulares que quieran aprender un instrumento. <br>
     - personas con ganas de tener un estudio de grabacion casero o "Home Studio" para realizar composicion o produccion musical.<br>
