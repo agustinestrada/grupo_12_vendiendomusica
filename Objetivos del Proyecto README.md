@@ -18,4 +18,4 @@ Agustin de Estrada,<br>
     Por otro lado mi objetivo es no solo buscar empleo en el mercado local sino tambien fuera del pais.<br>
     
 Franco Rodrigo Gauna,<br>
-    Lorem ipsum.....<br>
+    sdgsgasdffg<br>
