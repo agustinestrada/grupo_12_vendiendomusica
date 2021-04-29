@@ -10,7 +10,7 @@ Ej: <br>
 Integrantes del Equipo 12<br>
 
 Fernando Ariel Calaza,<br>
-    Lorem ipsum.....<br>
+    Mi objetivo con este proyecto y con el aprendisaje adquirido en el curso de Programador Web Full Stack es lograr el buen uso y manejo de herramientas brindadas para crear e innovar en el area digital centrandome en webs y aplicaciones, programas de uso cotidiano o coorporativos. Estoy abierto a trabajar sea en el area local o en el exterior.     <br>
 
 Agustin de Estrada,<br>
     Mi idea con este proyecto y con el aprendizaje del curso de Fullstack Web Developer es poder proveer de soluciones a problemas concretos de la vida cotidiana
@@ -18,5 +18,4 @@ Agustin de Estrada,<br>
     Por otro lado mi objetivo es no solo buscar empleo en el mercado local sino tambien fuera del pais.<br>
     
 Franco Rodrigo Gauna,<br>
-    Mi propósito por el que me inscribí en el curso es adquirir expereriencia para asi el día de mañana conseguir trabajo de esto y ayudar en la web de la empresa familiar.
-    Con este proyecto me acerco a un paso más a mi objetivo.
+    sdgsgasdffg<br>
