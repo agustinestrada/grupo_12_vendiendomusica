@@ -1,8 +1,21 @@
 # grupo_12_vendiendomusica
-05/05/2021
+Reunion 05/05/2021 <br>
 
+Se planifico el 2do sprint, y los objetivos por persona son;
 
+Agus:<br>
+  Escribir esta minuta.
+  Generar la estructura de carpetas en github.
+  Levantar el servidor y generar las rutas con los distintos HTML.
+  Generar los HTML de INDEX.HTML y PRODUCTDETAIL.HTML.
+  
+Fer:
+  Generar el HTML de PRODUCTCART.HTML
+  
+Fran:
+  Generar los HTML de LOGIN.HTML y REGISTER.HTML
 
+Tener una reunion el 06/05/2021 para definir los parametros de diseño del main.css
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------<br>
 
