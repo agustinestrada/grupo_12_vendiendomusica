@@ -5,7 +5,7 @@ const pathViews = path.join(__dirname + '/src/views')
 
 app.use(express.static('public'))
 
-app.listen(3456,() =>{
+app.listen(3030,() =>{
     console.log('tamo re activo papi');
 })
 

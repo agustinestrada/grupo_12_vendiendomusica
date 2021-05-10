@@ -1,14 +1,44 @@
-body{ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+*{
+    box-sizing: border-box;
+}
 
-h2{
-    color: 000000;
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    margin: 0;
 }
 
 header{
-    background-color: #000;
-    color: #FFFFFF;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}   
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
-footer{
-    background-color: #000;
+.nav-bar-espaciado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 50%;
 }
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.regla-contenedor{
+    width: 50%;
+}
+
+/*<li><img src="/img/Index/bolso.jpg" alt=""></li>*/
