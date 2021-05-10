@@ -22,6 +22,11 @@ header{
     align-items: flex-end;
 }
 
+ul{
+    list-style: none;
+    margin: 0;
+}
+
 .nav-bar-espaciado{
     display: flex;
     flex-direction: row;
@@ -32,13 +37,19 @@ header{
 
 main{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.regla-contenedor{
-    width: 50%;
+.adentro-section{
+    display: flex;
+    flex-direction: row;
+    
 }
 
-/*<li><img src="/img/Index/bolso.jpg" alt=""></li>*/
+@media(max-width:560px){
+    .ocultar{
+        display: none;
+    }
+}
