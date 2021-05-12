@@ -84,6 +84,28 @@ h2{
     margin:0;
     border: 0;
 }
+
+.marcas{
+    font-display: flex;
+    flex-direction: column;
+    
+}
+
+.nuestras-marcas{
+    width: 45%;
+    margin: 0;
+}
+
+.estructura-main{
+    display:flex;
+    flex-direction: row;
+}
+
+.grilla-izquerda{
+    width: 45%;
+    align-content: stretch;
+}
+
 @media(max-width:560px){
     .ocultar{
         display: none;
