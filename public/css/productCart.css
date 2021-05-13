@@ -52,22 +52,22 @@ btn. {
     display: inline-block;
     }
     main {padding: 40px 240px 80px;}
-.img-logo {border-radius: 100px;}
 
 .flex-container {
 display: flex;
-flex-direction: row wrap;
+flex-direction: row;
 background-color: white
-padding:100px;
-justify-content: space-between;
+padding: 80px;
+justify-content: space-around;
 }
 
 .flex-container div {
     background-color: ;
     with: 100 px;
     margin: 10 px;
-    text-align: center
+    text-align: left
     line-height: 75 px;
     font-size: 25 px; 
 }
 
+.logo {border-radius: 100%;}
