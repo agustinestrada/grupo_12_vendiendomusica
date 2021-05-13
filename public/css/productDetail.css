@@ -50,22 +50,37 @@ ul{
     align-self: center;
 }
 
+.navegacion-secundaria{
+    background-color: rgb(179, 179, 179);
+    color: white ;
+}
+
+
 main{
     height: 70vh;
+    display: flex;
+    align-items:stretch;
+    justify-content: center;
 }
 
 .imagenes-laterales{
     display: flex;
     flex-direction: column;
+    box-shadow: grey;
     
 }
 
 .contenedo-main{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 1%;
-    padding: 1%;
+    justify-content:flex-start;
+    margin: 5%;
+    padding: 5%;
+    border-style:groove;
+    box-shadow: grey 40PX;
+    align-items: stretch;
+
+    
 }
 
 footer{
@@ -80,15 +95,12 @@ footer{
     border-color: black;
 }
 
-.navegacion-secundaria{
-    background-color: rgb(139, 139, 139);
-    color: white ;
-}
+
 
 .botones-compra{
     display: flex;
     justify-content: center;
-    border:0%;
+    border:none;
     background-color: rgb(61, 107, 255);
     color: white;
 }
@@ -96,7 +108,7 @@ footer{
 .botones-carrito{
     display: flex;
     justify-content: center;
-    border:none
+    border:none;
     background-color: #fff;
     color: rgb(61, 107, 255);
 }
@@ -107,6 +119,7 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: stretch;
+    border-style: solid;
 }
 
 .compra{
