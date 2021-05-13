@@ -17,8 +17,22 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-wrap: nowrap;
 } 
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.nav-bar-espaciado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 50%;
+}
 
 ul{
     list-style: none;
@@ -29,13 +43,20 @@ ul{
     border-radius: 100%;
 }
 
-main section{
+.imagenes-laterales{
     display: flex;
+    flex-direction: column;
+    
 }
 
-
+.contenedo-main{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 footer{
     background-color: #000;
+    color: white;
 }
 
