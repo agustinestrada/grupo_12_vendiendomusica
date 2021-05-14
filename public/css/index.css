@@ -49,6 +49,8 @@ article{
 .logo{
     border-radius: 100%;
     justify-content: center;
+    margin: 10px;
+    margin-left: 20px;
 }
 
 .adentro-section-vertical{
@@ -105,8 +107,9 @@ h2{
 }
 
 .bordes{
-    border:gray solid;
-    box-shadow: gray 10px;
+    border: rgb(185,185,185) solid 1px;
+    border-radius: 15px;
+    box-shadow: 7px 5px 10px rgb(185, 185, 185);
     margin: 10px;
 }
 
