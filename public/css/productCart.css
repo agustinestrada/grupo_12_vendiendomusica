@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     margin: 0;
@@ -31,18 +35,17 @@ ul{
     width: 50%;
 }
 
-*{
-    box-sizing: border-box;
-
-.nav-bar {height: 70px;}
+.nav-bar {
+    height: 70px;
 }
 
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg > .btn, .btn-lg {
     padding: .35rem 12rem;
     font-size: 1.25rem;
-    line-height: 5.5;
+    line-height: 1;
     border-radius: .3rem;
 }
+
 .btn-primary {
     color: #fff;
     background-color: #007bff;
@@ -54,24 +57,25 @@ ul{
         font: weight 200px;
     }
 }
-btn. {
+.btn{
     display: inline-block;
-    }
-    main {padding: 40px 240px 80px;}
+}
+
+main {padding: 40px 240px 80px;}
 
 .flex-container {
 display: flex;
 flex-direction: row;
-background-color: white
-padding: 80px;
+background-color: white;
+padding: 10px;
 justify-content: space-around;
 }
 
 .flex-container div {
-    background-color: ;
-    with: 100 px;
+    background-color: white;
+    width: 100 px;
     margin: 10 px;
-    text-align: left
+    text-align: left;
     line-height: 75 px;
     font-size: 25 px; 
 }

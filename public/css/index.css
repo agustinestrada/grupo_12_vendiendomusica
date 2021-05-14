@@ -27,21 +27,17 @@ ul{
     margin: 0;
 }
 
+.grilla{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .nav-bar-espaciado{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     width: 50%;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0%;
-    border: 0;
 }
 
 article{
@@ -53,6 +49,8 @@ article{
 .logo{
     border-radius: 100%;
     justify-content: center;
+    margin: 10px;
+    margin-left: 20px;
 }
 
 .adentro-section-vertical{
@@ -88,22 +86,57 @@ h2{
 .marcas{
     font-display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     
 }
 
+.c-marcas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 80%;
+}
+
 .nuestras-marcas{
-    width: 45%;
-    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+.bordes{
+    border: rgb(185,185,185) solid 1px;
+    border-radius: 15px;
+    box-shadow: 7px 5px 10px rgb(185, 185, 185);
+    margin: 10px;
 }
 
 .estructura-main{
     display:flex;
     flex-direction: row;
+    justify-content: center;
 }
 
-.grilla-izquerda{
-    width: 45%;
+.grilla-izquierda{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+
+}
+
+.grilla-derecha{
+    width: 500px;
     align-content: stretch;
+    padding: 2%;
+}
+
+.main-contenedor{
+    display: flex;
+    justify-content: center;
+    
 }
 
 @media(max-width:560px){

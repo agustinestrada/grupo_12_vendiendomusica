@@ -17,10 +17,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20vh;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    height: 15vh;
 } 
 
 .nav-bar{
@@ -47,25 +44,45 @@ ul{
 
 .logo{
     border-radius: 100%;
-    align-self: center;
+    margin: 6px;
 }
+
+.navegacion-secundaria{
+    background-color: rgb(179, 179, 179);
+    color: white ;
+}
+
 
 main{
     height: 70vh;
+    display: flex;
+    align-items:stretch;
+    justify-content: center;
 }
 
 .imagenes-laterales{
     display: flex;
     flex-direction: column;
-    
+    justify-content: space-between;  
+    margin: 15px;  
 }
 
 .contenedo-main{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    margin: 1%;
-    padding: 1%;
+    justify-content:space-between;
+    align-items: stretch;
+    padding: 60px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    box-shadow:7px 5px 10px gray; ;
+    
+}
+
+.shadow{
+    border: solid 1px rgb(185, 185, 185);
+    border-radius: 5px;
+    box-shadow: 7px 5px 10px rgb(185, 185, 185);
 }
 
 footer{
@@ -80,25 +97,23 @@ footer{
     border-color: black;
 }
 
-.navegacion-secundaria{
-    background-color: rgb(139, 139, 139);
-    color: white ;
-}
-
 .botones-compra{
     display: flex;
     justify-content: center;
-    border:0%;
+    border:transparent;
+    border-radius: 7px;
     background-color: rgb(61, 107, 255);
     color: white;
+    font-size: 25px;
 }
 
 .botones-carrito{
     display: flex;
     justify-content: center;
-    border:none
+    border:none;
     background-color: #fff;
     color: rgb(61, 107, 255);
+    font-size: 18px;
 }
 
 .columna3{
@@ -107,11 +122,21 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: stretch;
+    border: solid 1px rgb(185, 185, 185);
+    border-radius: 15px;
+    box-shadow: 7px 5px 10px rgb(185, 185, 185);
+    padding: 10px;
 }
 
 .compra{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
+}
+
+.columnas{
+    width:50% ;
+    margin: 7% ;
+
 }
