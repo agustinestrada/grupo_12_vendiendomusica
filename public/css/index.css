@@ -78,11 +78,6 @@ h2{
     margin: 0;
 }
 
-.margenes{
-    margin:0;
-    border: 0;
-}
-
 .marcas{
     font-display: flex;
     flex-direction: column;
