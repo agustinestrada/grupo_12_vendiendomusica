@@ -1,85 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>Introducción formularios web</title>
-    <center><h1>Registrate Aca!</h1></center>
-	<meta charset="utf-8"/>
-	<meta name="description" content="Un formulario sirve para enviar datos a otra página que los recoge para usarlos o almacenarlos."/>
-
-	<style>
-
-form{
-	width:300px;
-	padding:16px;
-	border-radius:10px;
-	margin:auto;
-	background-color:#ccc;
-}
-
-form label{
-	width:72px;
-	font-weight:bold;
-	display:inline-block;
-}
-
-form input[type="text"],
-form input[type="email"]{
-	width:180px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	display:inline-block;
-}
-
-form input[type="submit"]{
-	width:100%;
-	padding:8px 16px;
-	margin-top:32px;
-	border:1px solid #000;
-	border-radius:5px;
-	display:block;
-	color:#fff;
-	background-color:#000;
-} 
-
-form input[type="submit"]:hover{
-	cursor:pointer;
-}
-
-textarea{
-	width:100%;
-	height:100px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;			
-	margin:8px 0;
-	/*resize: vertical | horizontal | none | both*/
-	resize:none;
-	display:block;
-}
-	</style>
-
+	<link rel="stylesheet" href="/css/register.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rock & Blues Music</title>
 </head>
+
 <body>
+	<header>
+		<section class="nav-bar">
+			<img src="/img/Index/Logo-nuestro.png" alt width="60px" class="logo">
+			<section>
+				<button id="Ingresa">Ingresa</button>
+				<button id="Registrate">Registrate</button>
+			</section>
+		</section>
+		<nav class="nav-bar">
+			<span>Rock & Blues Music</span>
+			<ul class="nav-bar-espaciado">
+				<li>Catalogo</li>
+				<li>Ofertas!</li>
+				<li>About Us</li>
+				<li>Contacto</li>
+				<li><img src="/img/Index/bolso.jpg" class="ocultar"></li>
+			</ul>
+		</nav>
+	</header>
+	<div>
+		<img src="/img/Index/banner.jpg" alt width="100%">
+	</div>
 
-<form action="#" target="" method="get" name="formDatosPersonales">
+	<main>
+		<section class="main-contenedor">
+			<div><h1>Registrate</h1></div>
+			<form action="/" method="GET" class="main-formulario"> 
+				
+				<div class="formulario">
+					<div class="nombre-y-apellido">
+						<div class="etiqueta-formulario3">
+							<label for="name">Nombre</label>
+							<input type="text" name="name" id="name">
+						</div>
+						<div class="etiqueta-formulario2">
+							<label for="last-name">Apellido</label>
+							<input type="text" name="last-name" id="last-name">
+						</div>
+					</div>
 
-	<label for="nombre">Nombre</label>
-	<input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+					<div class="etiqueta-formulario">
+						<label for="user">Email</label>
+						<input type="email" name="email" id="user">
+					</div>
+					<div class="etiqueta-formulario">
+						<label for="password">Contraseña</label>
+						<input type="password" name="clave" id="password">
+					</div>
+					<div class="etiqueta-formulario">
+						<label for="confirm-password">Confirmar Contraseña</label>
+						<input type="password" name="clave" id="confirm-password">
+					</div>
 
-	<label for="apellidos">Apellido</label>
-	<input type="text" name="apellidos" id="apellidos" placeholder="Escribe tu apellido"/>
+					<div class="etiqueta-formulario">
+						<button type="submit" class="boton">
+							Registrate
+						</button>
+					</div>
+				</div>
+			</form>
 
-	<label for="email" />Email</label>
-	<input type="email" name="email" id="email" placeholder="email" required />
+		</section>
+	</main>
 
-	<label for="asunto">Contrasena</label>
-	<input type ="text" name="asunto" id="asunto" placeholder="***********"/>
-
-	<input type="submit" name="Registrate" value="Registrate"/>
-</form>
-
+	<footer>
+		<h2>Aca va un footer</h2>
+	</footer>
 </body>
+
 </html>
