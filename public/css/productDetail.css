@@ -17,10 +17,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 20vh;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    height: 15vh;
 } 
 
 .nav-bar{
@@ -47,7 +44,7 @@ ul{
 
 .logo{
     border-radius: 100%;
-    align-self: center;
+    margin: 6px;
 }
 
 .navegacion-secundaria{
@@ -66,21 +63,26 @@ main{
 .imagenes-laterales{
     display: flex;
     flex-direction: column;
-    box-shadow: grey;
-    
+    justify-content: space-between;  
+    margin: 15px;  
 }
 
 .contenedo-main{
     display:flex;
     flex-direction: row;
-    justify-content:flex-start;
-    margin: 5%;
-    padding: 5%;
-    border-style:groove;
-    box-shadow: grey 40PX;
+    justify-content:space-between;
     align-items: stretch;
-
+    padding: 60px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    box-shadow:7px 5px 10px gray; ;
     
+}
+
+.shadow{
+    border: solid 1px rgb(185, 185, 185);
+    border-radius: 5px;
+    box-shadow: 7px 5px 10px rgb(185, 185, 185);
 }
 
 footer{
@@ -95,14 +97,14 @@ footer{
     border-color: black;
 }
 
-
-
 .botones-compra{
     display: flex;
     justify-content: center;
-    border:none;
+    border:transparent;
+    border-radius: 7px;
     background-color: rgb(61, 107, 255);
     color: white;
+    font-size: 25px;
 }
 
 .botones-carrito{
@@ -111,6 +113,7 @@ footer{
     border:none;
     background-color: #fff;
     color: rgb(61, 107, 255);
+    font-size: 18px;
 }
 
 .columna3{
@@ -119,12 +122,21 @@ footer{
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: stretch;
-    border-style: solid;
+    border: solid 1px rgb(185, 185, 185);
+    border-radius: 15px;
+    box-shadow: 7px 5px 10px rgb(185, 185, 185);
+    padding: 10px;
 }
 
 .compra{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;  
+}
+
+.columnas{
+    width:50% ;
+    margin: 7% ;
+
 }
