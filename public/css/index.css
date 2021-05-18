@@ -4,7 +4,7 @@
 
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
+    margin: 0px;
 }
 
 /*HEADER*/
@@ -23,8 +23,6 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-bar-espaciado{
@@ -33,6 +31,12 @@ header{
     justify-content: space-between;
     align-items: flex-end;
     width: 50%;
+    padding-bottom: 10px;
+}
+
+.nick {
+    padding: 10px;
+    font-size: 1.5rem;
 }
 
 ul{
@@ -50,8 +54,37 @@ a{
     text-decoration: none;
 }
 
-/*MAIN*/
+.ingresa {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 20px;
+    font-size: 1rem;
+}
 
+#Registrate {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#barra-de-busqueda {
+    color: rgba(0, 0, 0, 0.5) ;
+    background-color: white;
+    border-radius: 2px;
+    text-align: left;
+    padding: 5px;
+    width: 50vw;
+    margin-bottom: 10px;
+}
+
+
+/*MAIN*/
 
 
 .grilla{
@@ -67,10 +100,8 @@ a{
     width: 50%;
 }
 
-
-
 .logo{
-    border-radius: 100%;
+    
     justify-content: center;
     margin: 10px;
     margin-left: 20px;
@@ -96,10 +127,7 @@ article{
 
 footer{
     background-color: black;
-    margin: 0;
     color:white;
-    border: 0;
-
 }
 
 h2{
@@ -119,7 +147,7 @@ h2{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
 }
 
 .nuestras-marcas{
@@ -129,9 +157,14 @@ h2{
     margin: 10px;
 }
 
+.nuestras-marcas div {
+    margin: 5px;
+    box-shadow: 6px 6px 6px rgb(185, 185, 185);
+    border: 1px solid black;
+}
+
 .bordes{
     border: rgb(185,185,185) solid 1px;
-    border-radius: 15px;
     box-shadow: 7px 5px 10px rgb(185, 185, 185);
     margin: 10px;
 }
@@ -145,13 +178,12 @@ h2{
 .grilla-izquierda{
     display: flex;
     flex-direction: column;
-
     justify-content: space-around;
 
 }
 
 .grilla-derecha{
-    width: 500px;
+    width: 45%;
     align-content: stretch;
     padding: 2%;
 }
@@ -159,11 +191,37 @@ h2{
 .main-contenedor{
     display: flex;
     justify-content: center;
-    
+    flex-direction: row;
+    padding: 40px 0px;
 }
 
-@media(max-width:560px){
+footer .logo {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.nav-bar-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 50px;
+    margin: 30px 0px;
+}
+
+.derechos {
+    margin-bottom: 0px;
+    padding: 0px 0px 10px 10px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.ocultar {
+    display: none;
+}
+
+@media(min-width:481px){
     .ocultar{
-        display: none;
+        display: initial;
     }
 }
