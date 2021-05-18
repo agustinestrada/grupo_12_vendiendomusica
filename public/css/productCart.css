@@ -91,3 +91,34 @@ justify-content: space-around;
 }
 
 .logo {border-radius: 100%;}
+
+footer .logo {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.nav-bar-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 50px;
+    margin: 30px 0px;
+}
+
+.derechos {
+    margin-bottom: 0px;
+    padding: 0px 0px 10px 10px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+}
+
+.ocultar {
+    display: none;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+}
