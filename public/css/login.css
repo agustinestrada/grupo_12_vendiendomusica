@@ -144,16 +144,26 @@ input{
 
 /*FOOTER*/
 
+
 footer{
     background: #000;
     color: white;
+<<<<<<< HEAD
+=======
+    margin-top: 20px; 
+>>>>>>> 8d65cd21a3e9aeca58fc09de5d8ee2185f65b629
 }
 
 footer .logo {
     margin-top: 20px;
     margin-bottom: 0px;
+<<<<<<< HEAD
     margin-left: 20px;
     border-radius: 50px;
+=======
+    background: #000;
+    color: white;
+>>>>>>> 8d65cd21a3e9aeca58fc09de5d8ee2185f65b629
 }
 
 .nav-bar-footer {
@@ -170,4 +180,11 @@ footer .logo {
     padding: 0px 0px 10px 10px;
     font-size: 0.8rem;
     opacity: 0.5;
+<<<<<<< HEAD
+=======
+}
+
+.ocultar {
+    display: none;
+>>>>>>> 8d65cd21a3e9aeca58fc09de5d8ee2185f65b629
 }

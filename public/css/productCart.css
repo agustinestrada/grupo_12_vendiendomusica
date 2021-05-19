@@ -130,6 +130,7 @@ justify-content: space-around;
 
 .logo {border-radius: 100%;}
 
+<<<<<<< HEAD
 
 /*FOOTER*/
 
@@ -143,6 +144,11 @@ footer .logo {
     margin-bottom: 0px;
     margin-left: 20px;
     border-radius: 50px;
+=======
+footer .logo {
+    margin-top: 20px;
+    margin-bottom: 0px;
+>>>>>>> 8d65cd21a3e9aeca58fc09de5d8ee2185f65b629
 }
 
 .nav-bar-footer {
@@ -159,4 +165,17 @@ footer .logo {
     padding: 0px 0px 10px 10px;
     font-size: 0.8rem;
     opacity: 0.5;
+<<<<<<< HEAD
+=======
+}
+
+.ocultar {
+    display: none;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+>>>>>>> 8d65cd21a3e9aeca58fc09de5d8ee2185f65b629
 }

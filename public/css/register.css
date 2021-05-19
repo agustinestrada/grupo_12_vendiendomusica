@@ -170,8 +170,6 @@ footer{
 footer .logo {
     margin-top: 20px;
     margin-bottom: 0px;
-    margin-left: 20px;
-    border-radius: 50px;
 }
 
 .nav-bar-footer {
@@ -188,4 +186,8 @@ footer .logo {
     padding: 0px 0px 10px 10px;
     font-size: 0.8rem;
     opacity: 0.5;
+}
+
+.ocultar {
+    display: none;
 }
