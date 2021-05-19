@@ -15,7 +15,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 15vh;
+    height: 20vh;
 } 
 
 .nav-bar{
@@ -23,8 +23,6 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-bar-espaciado{
@@ -33,6 +31,12 @@ header{
     justify-content: space-between;
     align-items: flex-end;
     width: 50%;
+    padding-bottom: 10px;
+}
+
+.nick {
+    padding: 10px;
+    font-size: 1.5rem;
 }
 
 ul{
@@ -42,14 +46,48 @@ ul{
 
 .logo{
     border-radius: 100%;
-    margin: 6px;
+    margin-left: 6px;
 }
 
-.navegacion-secundaria{
-    background-color: rgb(179, 179, 179);
-    color: white ;
+a{
+    color: white;
+    text-decoration: none;
 }
 
+.ingresa {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+#Registrate {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#barra-de-busqueda {
+    color: rgba(0, 0, 0, 0.5) ;
+    background-color: white;
+    border-radius: 2px;
+    text-align: left;
+    padding: 5px;
+    width: 50vw;
+    margin-bottom: 10px;
+}
+
+.navegacion-secundaria {
+    padding: 20px;
+    color: #ebebeb;
+    opacity: 0.8;
+}
 
 /*MAIN*/
 
@@ -68,6 +106,7 @@ main{
     border-radius: 10px;
     box-shadow:7px 5px 10px rgb(185, 185, 185);
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .columnas{
@@ -139,8 +178,32 @@ main{
     align-items: center;  
 }
 
+/*FOOTER*/
+
 footer{
-    background-color: #000;
+    background: #000;
     color: white;
-    height: 10vh;
+}
+
+footer .logo {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    border-radius: 50px;
+}
+
+.nav-bar-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0px 50px;
+    margin: 30px 0px;
+}
+
+.derechos {
+    margin-bottom: 0px;
+    padding: 0px 0px 10px 10px;
+    font-size: 0.8rem;
+    opacity: 0.5;
 }
