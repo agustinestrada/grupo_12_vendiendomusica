@@ -2,10 +2,11 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const pathViews = path.join(__dirname + '/src/views')
+const port = process.env.PORT || 3030
 
 app.use(express.static('public'))
 
-app.listen(3030,() =>{
+app.listen(port,() =>{
     console.log('tamo re activo papi');
 })
 
