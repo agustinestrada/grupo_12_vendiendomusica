@@ -29,3 +29,7 @@ app.get('/productCart', (req, res) => {
 app.get('/productDetail', (req, res) => {
     res.sendFile(path.join(pathViews + '/productDetail.html'))
 })
+
+app.use((req, res, next) => {
+    res.status(404).sendFile(pathViews + '/404.html')
+})
