@@ -33,3 +33,6 @@ app.get('/productDetail', (req, res) => {
 app.use((req, res, next) => {
     res.status(404).sendFile(pathViews + '/404.html')
 })
+
+//ejs en nuestro proyecto
+app.set('view engine', 'ejs');
