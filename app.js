@@ -1,29 +1,19 @@
 const express = require('express')
-const path = require('path')
-const port = process.env.PORT || 3030
-const productsRoutes = require ('./src/routes/product.js')
-
 const app = express()
+const path = require('path')
+const port = process.env.PORT || 3050
+const productsRoutes = require ('./routes/product.js')
+const userRoutes = require ('./routes/user.js')
 
 app.listen(port,() =>{
     console.log('El servidor se inicio correctamente');
 })
 
-app.use('/products', productsRoutes)
-
 app.use(express.static('public'))
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/src/views/index.html'))
+    res.render('index')
 })
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname + '/src/views/login.html'))
-})
-
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname + '/src/views/register.html'))
-})
-
-//ejs en nuestro proyecto
-app.set('view engine', 'ejs');
+app.use('/products', productsRoutes)
+app.use('/user', userRoutes)
