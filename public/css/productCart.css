@@ -24,10 +24,10 @@ body{
 }
 
 .btn link {
-        color: #0056b3;
-        text-decoration: underline;
-        font: weight 200px;
-    }
+    color: #0056b3;
+    text-decoration: underline;
+    font: weight 200px;
+}
 
 .btn{
     display: inline-block;
