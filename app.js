@@ -10,10 +10,14 @@ app.listen(port,() =>{
 })
 
 app.use(express.static('public'))
+
+
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
     res.render('index')
 })
+
+
 app.use('/products', productsRoutes)
 app.use('/user', userRoutes)

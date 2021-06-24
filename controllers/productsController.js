@@ -1,5 +1,5 @@
 let productosController = {
-    list: (req, res) =>{
+    checkout: (req, res) =>{
             res.render('productCart')
     },
     detail:(req, res) => {
