@@ -39,6 +39,7 @@ ul{
     justify-content: center;
     margin: 10px;
     margin-left: 20px;
+    margin-top: 20px;
 }
 
 a{
@@ -46,10 +47,14 @@ a{
     text-decoration: none;
 }
 
+a:visited{
+    color: inherit;
+}
+
 .ingresa {
     background-color: black;
     color: white;
-    border-radius: 10px;
+    border-color: black;
     padding: 5px;
     margin-right: 20px;
     font-size: 1rem;
@@ -73,5 +78,10 @@ a{
     padding: 5px;
     width: 50vw;
     margin-bottom: 10px;
+}
+
+.fas.fa-shopping-bag{
+    font-size: 22px;
+    margin-right: 20px;
 }
 

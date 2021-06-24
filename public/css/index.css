@@ -92,13 +92,16 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-right: 80px;
 
 }
 
 .grilla-derecha{
+    border-left: solid 12px rgb(185, 185, 185);
     width: 45%;
     align-content: stretch;
     padding: 2%;
+    padding-left: 80px;
 }
 
 .main-contenedor{
