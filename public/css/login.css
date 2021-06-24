@@ -141,35 +141,3 @@ input{
     border: solid 1px rgb(185,185,185);
     box-shadow: 5px 5px 7px rgb(185,185,185);
 }
-
-/*FOOTER*/
-
-
-footer{
-    background: #000;
-    color: white;
-    margin-top: 20px; 
-}
-
-footer .logo {
-    margin-top: 20px;
-    margin-bottom: 0px;
-    background: #000;
-    color: white;
-}
-
-.nav-bar-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0px 50px;
-    margin: 30px 0px;
-}
-
-.derechos {
-    margin-bottom: 0px;
-    padding: 0px 0px 10px 10px;
-    font-size: 0.8rem;
-    opacity: 0.5;
-}

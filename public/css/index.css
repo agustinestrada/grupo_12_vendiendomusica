@@ -127,11 +127,6 @@ article{
     border: 0;
 }
 
-footer{
-    background-color: black;
-    color:white;
-}
-
 h2{
     margin: 0;
 }
@@ -195,11 +190,6 @@ h2{
     justify-content: center;
     flex-direction: row;
     padding: 40px 0px;
-}
-
-footer .logo {
-    margin-top: 20px;
-    margin-bottom: 0px;
 }
 
 .nav-bar-footer {
