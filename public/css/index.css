@@ -102,13 +102,6 @@ a{
     width: 50%;
 }
 
-.logo{
-    
-    justify-content: center;
-    margin: 10px;
-    margin-left: 20px;
-}
-
 .adentro-section-vertical{
     display: flex;
     flex-direction: column;
@@ -210,10 +203,4 @@ h2{
 
 .ocultar {
     display: none;
-}
-
-@media(min-width:481px){
-    .ocultar{
-        display: initial;
-    }
 }
