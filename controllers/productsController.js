@@ -1,9 +1,9 @@
 let productosController = {
     checkout: (req, res) =>{
-            res.render('productCart')
+            res.render('./products/productCart')
     },
     detail:(req, res) => {
-        res.render('productDetail')
+        res.render('./products/productDetail')
     }
 }
 
