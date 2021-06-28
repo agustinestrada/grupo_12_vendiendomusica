@@ -1,0 +1,49 @@
+<%- include('../parcials/head.ejs') %>
+<link rel="stylesheet" href="/css/register.css">
+<body>
+	<%- include('../parcials/header.ejs') %>
+
+	<main>
+		<section class="main-contenedor">
+			<div><h1>Registrate</h1></div>
+			<form action="/" method="GET" class="main-formulario"> 
+				
+				<div class="formulario">
+					<div class="nombre-y-apellido">
+						<div class="etiqueta-formulario3">
+							<label for="name">Nombre</label>
+							<input type="text" name="name" id="name">
+						</div>
+						<div class="etiqueta-formulario2">
+							<label for="last-name">Apellido</label>
+							<input type="text" name="last-name" id="last-name">
+						</div>
+					</div>
+
+					<div class="etiqueta-formulario">
+						<label for="user">Email</label>
+						<input type="email" name="email" id="user">
+					</div>
+					<div class="etiqueta-formulario">
+						<label for="password">Contraseña</label>
+						<input type="password" name="clave" id="password">
+					</div>
+					<div class="etiqueta-formulario">
+						<label for="confirm-password">Confirmar Contraseña</label>
+						<input type="password" name="clave" id="confirm-password">
+					</div>
+
+					<div class="etiqueta-formulario">
+						<button type="submit" class="boton">
+							Registrate
+						</button>
+					</div>
+				</div>
+			</form>
+
+		</section>
+	</main>
+
+	<%- include('../parcials/footer.ejs') %>
+
+</html>

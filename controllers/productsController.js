@@ -4,7 +4,9 @@ let productosController = {
     },
     detail:(req, res) => {
         res.render('./products/productDetail')
+    },
+    create: (req,res) => {
+        res.render('./products/productCreateEdit')
     }
 }
-
 module.exports = productosController
