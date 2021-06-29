@@ -4,7 +4,7 @@ Como equipo la comunicacion es sumamente importante para llegar a los resultados
 2. Hacer mas <br>
 Estamos de acuerdo que hacer mas reuniones semanales y puestas en comun de avances e ideas innovadoras nos falta. Las que estamos realizando no alcanzan y sabemos que podemos en este aspecto mejorar como grupo <br>
 3. Continuar haciendo <br>
-Tener un ida y vuelta (feedback) en la reunion semanal con lo que cada uno aporto/trabajo en el proyecto de equipo.  <br>
+Tener un ida y vuelta (feedback) en la reunion semanal con lo que cada uno aporto/trabajo en el proyecto del equipo.  <br>
 4. Hacer menos <br>
 Deberiamos dejar de evaluar demasiado y esperar a los ultimos dias para definir lo que puede ir o quitar en el proyecto que afecte tanto a la funcionalidad como al aspecto-diseño-estetica del proyecto <br>
 5. Dejar de hacer <br>
