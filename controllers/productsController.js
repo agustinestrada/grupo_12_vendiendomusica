@@ -7,6 +7,9 @@ let productosController = {
     },
     create: (req,res) => {
         res.render('./products/productCreateEdit')
+    },
+    list: (req,res) => {
+        res.render('./products/productList')
     }
 }
 module.exports = productosController
