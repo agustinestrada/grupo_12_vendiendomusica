@@ -130,3 +130,43 @@ h2{
 .ocultar {
     display: none;
 }
+
+
+
+@media (max-width:600px) {
+
+    .estructura-main{
+
+    }
+
+    .main-contenedor{
+        width: 90%;
+    }
+
+    .grilla-izquierda{
+        display: none;
+    }
+
+    .grilla-derecha{
+        border: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .nuestras-marcas{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2{
+        margin-bottom: 20px;
+    }
+
+    .nuestras-marcas{
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}

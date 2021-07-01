@@ -119,3 +119,43 @@ a:visited{
     margin-right: 20px;
 }
 
+
+/* TELEFONO */
+
+@media (max-width: 600px){
+
+.pc{
+    display: none;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fas.fa-bars{
+    font-size: 50px;
+}
+
+.logo{
+    margin: 0;
+    padding: 0;
+}
+
+.item{
+    margin: 20px
+}
+
+}
+
+/*COMPUTADORA*/
+
+@media (min-width: 1920px){
+
+.mobile{
+    display: none;
+}
+
+}
