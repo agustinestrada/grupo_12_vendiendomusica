@@ -96,35 +96,72 @@ main{
     align-items: center;  
 }
 
-/*FOOTER*/
 
-footer{
-    background-color: black;
-    color: white;
-    margin-top: 20px;
-}
+/*TELEFONO*/
 
-footer .logo {
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
+@media (max-width: 600px){
 
-.nav-bar-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 0px 50px;
-    margin: 30px 0px;
-}
 
-.derechos {
-    margin-bottom: 0px;
-    padding: 0px 0px 10px 10px;
-    font-size: 0.8rem;
-    opacity: 0.5;
-}
-
-.ocultar {
+.columna1{
     display: none;
+}
+
+.contenedo-main{
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+}
+
+.medios-de-pago{
+    display: none;
+}
+
+.columnas{
+    display: flex;
+    flex-direction: column;
+}
+
+.columna2{
+    border:none;
+    width:fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+.columna3{
+    border:none;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.shadow{
+    align-items:flex-start;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.nombre{
+    font-size: 25px;
+}
+
+.precio{
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.compra{
+    margin-top: 30px;
+}
+
+.botones-carrito{
+    margin-top: 15px;
+}
+
 }
