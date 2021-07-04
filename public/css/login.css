@@ -12,18 +12,18 @@ body{
 main{
     display: flex;
     justify-content: center;
-    height: 40vh;
-    margin: 50px;
+
 }
 
 .main-contenedor{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     border: solid 1px rgb(185,185,185);
     border-radius: 20px;
     box-shadow:7px 7px 10px rgb(185, 185, 185);
     padding: 20px;
+    margin: 40px 0;
 
 }
 
@@ -35,7 +35,7 @@ main{
 .formulario{
     display: flex;
     flex-direction: column;
-    align-items:flex-end;
+    align-items:center;
     justify-content: space-between;
     width: 100%;
 }
@@ -50,18 +50,53 @@ main{
 
 }
 
-#ingresa-aca{
-    display: flex;
+.ingresa-aca{
     align-self: center;
+    font-size: 40px;
+    margin-bottom: 25px;
+
 }
 
 .boton{
     background-color: black;
     color: white;
+    font-size: 25px;
+    margin-bottom: 30px;
 }
 
 input{
     border-radius: 5px;
     border: solid 1px rgb(185,185,185);
     box-shadow: 5px 5px 7px rgb(185,185,185);
+    height: 30px;
+
+}
+
+label{
+    font-size: 20px;
+}
+
+
+@media (max-width:600px){
+
+.main-contenedor{
+    border:none;
+    border-radius: none;
+    box-shadow: none;
+}
+
+.ingresa-aca{
+    font-size: 25px;
+}
+
+.boton{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+input{
+    height: 30px;
+
+}
+
 }
