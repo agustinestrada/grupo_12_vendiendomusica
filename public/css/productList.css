@@ -21,6 +21,7 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .articulo{
@@ -56,4 +57,28 @@ section{
 
 .banner{
     display: none;
+}
+
+@media (max-width:600px){
+
+.articulos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.articulo{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid rgb(225, 225, 225);
+    box-shadow: 5px 5px 10px rgb(225, 225, 225);
+}
+
 }
