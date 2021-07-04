@@ -87,3 +87,22 @@ input{
 .descripcion{
     height: 100px;
 }
+
+
+@media(max-width:600px){
+
+.main-contenedor{
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.titulo{
+    font-size: 25px;
+    margin-bottom:25px ;
+}
+
+.imagen{
+    display: none;
+}
+}
