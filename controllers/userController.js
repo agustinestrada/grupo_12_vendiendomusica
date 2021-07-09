@@ -4,6 +4,9 @@ let userController = {
     },
     register: (req, res) => {
         res.render('./user/register')
+    },
+    exito: (req, res, next) =>{
+        res.redirect('/exito')
     }
 }
 

@@ -119,6 +119,13 @@ a:visited{
     margin-right: 20px;
 }
 
+.banner{
+    line-height: 0;
+}
+
+.pc{
+    line-height: 0;
+}
 
 /* TELEFONO */
 
