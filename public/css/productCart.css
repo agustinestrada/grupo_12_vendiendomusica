@@ -38,9 +38,10 @@ main {padding: 40px 240px 80px;}
 .flex-container {
 display: flex;
 flex-direction: row;
-background-color: white;
+background-color:white;
 padding: 10px;
 justify-content: space-around;
+
 }
 
 .flex-container div {
