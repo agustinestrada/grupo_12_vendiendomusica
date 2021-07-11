@@ -1,0 +1,61 @@
+<%- include('../parcials/head.ejs') %>
+<link rel="stylesheet" href="/css/contact.css">
+<body>
+    <%- include('../parcials/header.ejs') %>
+
+    <main>
+        <section class="main-contenedor">
+            <div class="titulo"><h1>Dejanos tu comentario o sugerencia</h1></div>
+            
+            <div class="division-ppal">
+            
+                <form action="/exito" method="POST" class="main-formulario"> 
+                
+
+                    <div class="etiqueta-formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="nombre" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="etiqueta-formulario">
+                        <label for="apellido">Apellido</label>
+                        <input type="apellido" name="apellido" id="apellido">
+                    </div>
+                    
+                    <div class="etiqueta-formulario">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+
+                    <div class="etiqueta-formulario">
+                        <label for="comentario">Comentario</label>
+                        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                    </div>
+                    
+                    <div class="botones">
+
+                        <button type="submit" class="boton">
+                            Enviar
+                        </button>
+
+                        <button type="reset" class="boton">
+                            Borrar
+                        </button>
+                    </div>
+
+                </form>               
+
+                <div class="imagen">
+                    <img src="/img/contact/write-letter.png" width="100%" alt="">
+                </div>
+
+            </div>
+            
+
+        </section>
+    </main>
+
+    <%- include('../parcials/footer.ejs') %>
+    
+</body>
+</html>
