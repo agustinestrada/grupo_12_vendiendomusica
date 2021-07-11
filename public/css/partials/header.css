@@ -21,14 +21,14 @@ header{
 }
 
 .barra-busqueda{
-    height: 30px;
+    height: 35px;
     width: 95%;
     border-radius: 5px;
     box-shadow: none;
 }
 
 .fas.fa-search{
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -59,11 +59,13 @@ header{
     align-items: flex-end;
     width: 50%;
     padding-bottom: 10px;
+    font-size: 22px;
 }
 
 .nick {
     padding: 10px;
-    font-size: 1.5rem;
+    font-size: 30px;
+    align-self: center;
 }
 
 ul{

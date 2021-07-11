@@ -3,17 +3,25 @@
         <div>
             <a href="/"><img src="/img/Index/Logo-nuestro.png" alt width="60px" class="logo"></a>
         </div>
+
         <div class="barra">
-            <input type="text" placeholder="Busca productos, marcas y mas..." class="barra-busqueda">
-            <button type="submit"><i class="fas fa-search"></i></button>
+            <form action="/" method="GET">
+                <input type="text" placeholder="Busca productos, marcas y mas..." name="busqueda"  id="busqueda" class="barra-busqueda">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
+
         <section class="botones">
             <button class="ingresa"><a href="/user/login">Ingresa</a></button>
             <button class="registrate"><a href="/user/register">Registrate</a></button>
         </section>
+
     </section>
+
     <nav class="nav-bar2">
+
         <span class="nick">Rock & Blues Music</span>
+
         <ul class="nav-bar-espaciado">
             <li><a href="/products/productList">Catalogo</a></li>
             <li>Ofertas!</li>
@@ -21,8 +29,11 @@
             <li><a href="/user/contact">Contacto</a></li>
             <li><a href="/products/productCart"><i class="fas fa-shopping-bag"></i></a></li>
         </ul>
+
     </nav>
+
 </header>
+
 <div class="pc">
     <img class ="banner" src="/img/Index/banner.jpg" alt width="100%">
 </div>
