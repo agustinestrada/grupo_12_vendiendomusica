@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
@@ -7,6 +9,32 @@ body{
     margin: 0;
 }
 
-main{
-    background-image: url('../img/error/fondo.jpg');
+.main-container{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center; 
+    margin: 30px auto;
+}
+
+.imagen{
+    width: 40%;
+    margin-bottom: 40px;
+}
+
+.encabezado{
+    flex-wrap: wrap;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+main section div button{
+    background-color: #60bfdb;
+    color: white;
+    font-size: 30px;
+    border:none;
+    border-radius: 5px;
+    padding: 10px;
 }

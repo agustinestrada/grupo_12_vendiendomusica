@@ -11,5 +11,6 @@ let productosController = {
     list: (req,res) => {
         res.render('./products/productList')
     }
+
 }
 module.exports = productosController
