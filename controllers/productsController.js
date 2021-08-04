@@ -1,9 +1,9 @@
-let productosController = {
+const productsController = {
     checkout: (req, res) =>{
             res.render('./products/productCart')
     },
     detail:(req, res) => {
-        res.render('./products/productDetail')
+        res.render('./products/:id')
     },
     create: (req,res) => {
         res.render('./products/productCreateEdit')
@@ -13,4 +13,4 @@ let productosController = {
     }
 
 }
-module.exports = productosController
+module.exports = productsController
