@@ -3,7 +3,7 @@ const { exito } = require('./controllers/userController.js')
 const app = express()
 const port = process.env.PORT || 3050
 const productsRoutes = require ('./routes/productRoutes.js')
-const userRoutes = require ('./routes/mainRoutes.js')
+const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
 
 app.listen(port,() =>{
