@@ -1,6 +1,6 @@
 const { json } = require("express")
 const fs = require('fs')
-const jsonFile = JSON.parse(fs.readFileSync(__dirname + '/productsData.json'))
+const jsonFile = JSON.parse(fs.readFileSync('./data/products.json'))
 /*esto es lo mismo que esto
 aca lee el archivo  const file = fs.readFileSync(__dirname + '/productsData.json')
 aca lo parsea       const jsonFile = JSON.parse(file)
