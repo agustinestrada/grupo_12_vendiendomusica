@@ -7,13 +7,13 @@ const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
 
 app.listen(port,() =>{
-    console.log('El servidor se inicio correctamente');
+    console.log('El servidor se inicio correctamente en el puerto 3050');
 })
 // definimos la arpera que devuelve los archivos estaticos
 app.use(express.static('public'))
 
-app.set('view engine', 'ejs');
-
+app.set('view engine', 'ejs')
+app.set('views', './views')
 // productos
 app.use('/products', productsRoutes)
 // usuarios

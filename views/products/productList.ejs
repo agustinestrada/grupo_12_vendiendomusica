@@ -6,6 +6,7 @@
         <section>
             <h2 class="titulares">Encontrá el producto que buscas!</h2>
             <div class="articulos">
+<<<<<<< Updated upstream
                     
                 </article>
 
@@ -43,7 +44,20 @@
                     <a href="/products/productDetail/7"><img class="imagen-promo" src="/img/productDetail/Main-guitarra.jpg" alt width="100%"></a>
                     
                 </article>
+=======
+                    <% productList.forEach((product) => { %>
+                        <article class="articulo">
+                            <img class="imagen-promo" src="<%= product.image %>" alt="" width="100%"></a>
+                            <h3>
+                                <a href="/products/productDetail/<%= product.id %> "><%= product.name %> </a>
+                            </h3>
+                        </article>        
+                    <% }) %>
+                
+                
+>>>>>>> Stashed changes
             </div>
+       
         </section>
     </main>
     <%- include('../parcials/footer.ejs') %>
