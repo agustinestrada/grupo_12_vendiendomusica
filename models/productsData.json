@@ -18,15 +18,16 @@
 
         },
         {
-            "id": 4,
+            "id": 3,
             "name": "none",
             "price": "1000",
             "category": "none",
             "image": "/img/productDetail/Main-guitarra.jpg",
             "descripcion": "ipsum lorem"
+
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "none",
             "price": "1000",
             "category": "none",
