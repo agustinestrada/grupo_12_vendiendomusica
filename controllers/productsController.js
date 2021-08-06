@@ -5,7 +5,7 @@ const productsController = {
     },
     detail:(req, res) => {
         const product = productModel.findByPK
-        res.render('./products/:id')
+         res.render('./products/productDetail', {product} )
     },
     create: (req,res) => {
         res.render('./products/productCreateEdit')
