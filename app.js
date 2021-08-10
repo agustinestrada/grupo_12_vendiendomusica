@@ -11,6 +11,9 @@ app.listen(port,() =>{
 })
 // definimos la arpera que devuelve los archivos estaticos
 app.use(express.static('public'))
+// No olvidarse esto para que la data se envie correctamente desde un formulario
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.set('view engine', 'ejs')
 app.set('views', './views')

@@ -4,8 +4,11 @@ const productsController = require('../controllers/productsController')
 
 productsRouter.get('/productCart', productsController.checkout )
 productsRouter.get('/productDetail/:id', productsController.detail )
-productsRouter.get('/productCreate', productsController.create )
 productsRouter.get('/productList', productsController.list )
+//Create
+productsRouter.get('/productCreate', productsController.create )
+productsRouter.post('/productCreate', productsController.store )
+
 
 
 module.exports = productsRouter;

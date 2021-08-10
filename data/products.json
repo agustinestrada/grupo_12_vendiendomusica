@@ -1,74 +1,72 @@
-{
-    "products": [
-        {
-            "id": 1,
-            "name": "pepe",
-            "price": "1000",
-            "category": "pape",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-        },
-        {
-            "id": 2,
-            "name": "none",
-            "price": "1000",
-            "category": "none",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-
-        },
-        {
-            "id": 3,
-            "name": "none",
-            "price": "1000",
-            "category": "none",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-
-        },
-        {
-            "id": 4,
-            "name": "none",
-            "price": "1000",
-            "category": "none",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-        },
-        {
-            "id": 5,
-            "name": "pepe",
-            "price": "1000",
-            "category": "pape",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-        },
-        {
-            "id": 6,
-            "name": "none",
-            "price": "1000",
-            "category": "none",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-
-        },
-        {
-            "id": 7,
-            "name": "none",
-            "price": "1000",
-            "category": "none",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-
-        },
-        {
-            "id": 8,
-            "name": "none",
-            "price": "1000",
-            "category": "none",
-            "image": "/img/productDetail/Main-guitarra.jpg",
-            "descripcion": "ipsum lorem"
-        }
-
-    ]
-}
-          
+[
+  {
+    "id": 1,
+    "name": "pepe",
+    "price": "1000",
+    "category": "pape",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "id": 2,
+    "name": "none",
+    "price": "1000",
+    "category": "none",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "id": 3,
+    "name": "none",
+    "price": "1000",
+    "category": "none",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "id": 4,
+    "name": "none",
+    "price": "1000",
+    "category": "none",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "id": 5,
+    "name": "pepe",
+    "price": "1000",
+    "category": "pape",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "id": 6,
+    "name": "none",
+    "price": "1000",
+    "category": "none",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "id": 7,
+    "name": "none",
+    "price": "1000",
+    "category": "none",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "id": 8,
+    "name": "none",
+    "price": "1000",
+    "category": "none",
+    "image": "/img/productDetail/Main-guitarra.jpg",
+    "descripcion": "ipsum lorem"
+  },
+  {
+    "price": "1000",
+    "category": "swqasa",
+    "descripcion": "sqwq1waqws",
+    "id": 9
+  }
+]
