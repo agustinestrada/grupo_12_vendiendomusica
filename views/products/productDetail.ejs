@@ -22,11 +22,17 @@
                     <div class="precio">
                         <span><strong>$60.000</strong></span>
                     </div>
+                    <a href="/products/productCreate/<%= product.id %>">
+                        <button>Edit</button>
+                    </a>
+                    <form action="/products/productDetail/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
                     <div class="medios-de-pago">
                         <span> <strong> Medios de Pago</strong></span><br>
                         <img src="/img/Index/pago.jpg" alt width="100%">
                     </div>
-                    <div class="compra"> 
+                                        <div class="compra"> 
                         <button class="botones-compra">Comprar Ahora</button>
                         <button class="botones-carrito">Agregar a la Bolsa</button>
                     </div>

@@ -22,23 +22,6 @@ module.exports = {
 
 
     },
-
-    findAll() {
-        //devuelve todos los productos
-        //return jsonFile.products
-        //const products = this.readFile();
-        //console.log(products)
-        return this.readFile()
-    },
-    findByPK(id) {
-        //devuleve un producto por id
-        const products = this.readFile();
-        const productFound = products.find(products => product.id == id);
-        //return jsonFile.products.find(product =>
-        //    Number(products.id) === Number(id)
-        //)
-        return productFound
-    },
     generateId(){
         //leo todos los productos
         const products = this.readFile();
@@ -47,15 +30,54 @@ module.exports = {
         //retorno el ultimo id y le sumo 1
         return lastProduct.id + 1
     },
-    create(product){
+    findAll() {
+        //devuelve todos los productos
+        //return jsonFile.products
+        const products = this.readFile();
+        return products
+        //return this.readFile()
+    },
+    findByPK(id) {
+        //devuleve un producto por id
+        const products = this.readFile();
+        const productFound = products.find(products => products.id == id);
+        //return jsonFile.products.find(product =>
+        //    Number(products.id) === Number(id)
+        //)
+        return productFound;
+    },
+     create(product){
         //genero un nuevo id
         product.id = this.generateId();
         //Leo el archgivo
         const products = this.readFile();
         //Agrego el producto al array de productos
-        const productsUdated = [...products, product]
+        const productsUdated = [...products, product];
         //Vuelvo a escribir el archivo con el nuevo array de productos
         this.writeFile(productsUdated);
-        return product
+        return product;
     },
+    update(data, id) {
+        //leer los productos
+        const products = this.readFile();
+        const newProdutcs = products.map(product =>{
+            if(product.id == id){
+                product = {
+                    id: planet.id,
+                    ...data
+                }
+            }
+            return product;
+        });
+
+        this.writeFile(newProdutcs);
+
+    },
+    destroy(id){
+        const products = this.readFile();
+
+        const newProducts = products.filter(product => product.id != id);
+        this.writeFile(newProducts);
+    }
+
 }

@@ -12,32 +12,32 @@
 
                         <div class="etiqueta-formulario">
                             <label for="product-name">Nombre de producto</label>
-                            <input type="text" name="productName" id="productName">
+                            <input type="text" name="name" id="name" required value="<%= product.name%>">
                         </div>
                         
                         <div class="etiqueta-formulario">
                             <label for="price">Precio</label>
-                            <input type="number" name="price" id="price">
+                            <input type="number" name="price" id="price" required value="<%= product.price%>">
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="category">Categoria</label>
-                            <input type="text" name="category" id="category">
+                            <input type="text" name="category" id="category" required value="<%= product.category%>">
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="product-image">Imagen</label>
-                            <input type="file" name="productImage" id="productImage">
+                            <input type="file" name="image" id="image" required value="<%= product.productImage%>">
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="descripcion">Descripcion</label>
-                            <input class="descripcion" type="textarea" name="descripcion" id="descripcion">
+                            <input class="descripcion" type="textarea" name="descripcion" id="descripcion"required value="<%=product.descripcion%>">
                         </div>
 
                         <div class="botones">
                             <button type="submit" class="boton">
-                                Crear producto
+                                Editar producto
                             </button>
                             <button type="reset" class="boton">
                                 Borrar
