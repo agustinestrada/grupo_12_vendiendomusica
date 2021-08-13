@@ -40,7 +40,7 @@ module.exports = {
     findByPK(id) {
         //devuleve un producto por id
         const products = this.readFile();
-        const productFound = products.find(products => products.id == id);
+        const productFound = products.find(product => product.id == id);
         //return jsonFile.products.find(product =>
         //    Number(products.id) === Number(id)
         //)

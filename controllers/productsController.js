@@ -4,18 +4,23 @@ const productsController = {
             res.render('./products/productCart')
     },
     detail:(req, res) => {
-        const product = productModel.findByPK
-         res.render('./products/productDetail', {product} )
+        //Traemos el id desde la url(parametro)
+        const { id } = req.params;
+        const productDetail = productModel.findByPK(id)
+        console.log(productDetail)
+        //const id = req.params.id
+        
+         res.render('./products/detail', {productDetail} )
                     
     },
     list: (req,res) => {
         const productList = productModel.findAll()
         //console.log(productList)
-        res.render('./products/productList', { productList })
+        res.render('./products/list', { productList })
     },
     create: (req,res) => {
         const product = productModel.findByPK(req.params.id);
-        res.render('./products/productCreateEdit', {product}) 
+        res.render('./products/create', {product}) 
     },
     store: (req,res) =>{
         //creo el objeto
@@ -27,11 +32,11 @@ const productsController = {
             descripcion
         }
         const productCreated = productModel.create(product);
-            res.redirect('./products/productsdetail/' + productCreated.id);
+            res.redirect('./products/detail/' + productCreated.id);
          },
     edit: (req, res) => {
         const product = productModel.findByPK(req.params.id);
-        console.log(product)
+        
         res.render('./products/edit', { product });
     },
     update: (req, res) =>{
@@ -42,14 +47,14 @@ const productsController = {
 
         productModel.update(data, id);
 
-        res.redirect('/products/productsDetail/' + id);
+        res.redirect('/products/detail/' + id);
     },
     destroy: (req, res) =>{
         const id = req.params.id;
 
         productModel.destroy(id);
-        res.redirect('products/productsList');
-
+        res.redirect('products/list');
+        
     },
 
     }
