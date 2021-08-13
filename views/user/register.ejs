@@ -1,12 +1,14 @@
 <%- include('../parcials/head.ejs') %>
+
 <link rel="stylesheet" href="/css/register.css">
+
 <body>
 	<%- include('../parcials/header.ejs') %>
 
 	<main>
 		<section class="main-contenedor">
 			<div><h1>Registrate</h1></div>
-			<form action="/" method="GET" class="main-formulario"> 
+			<form action="/user/register" method="POST" class="main-formulario"> 
 				
 				<div class="formulario">
 					<div class="nombre-y-apellido">
@@ -16,7 +18,7 @@
 						</div>
 						<div class="etiqueta-formulario2">
 							<label for="last-name">Apellido</label>
-							<input type="text" name="last-name" id="last-name">
+							<input type="text" name="last" id="last-name">
 						</div>
 					</div>
 
