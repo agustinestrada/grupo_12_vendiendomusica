@@ -12,6 +12,8 @@ let userController = {
         res.render('./user/contact')
     },
     storageUser:(req, res) => {
+
+        //construir un nuevo usuario tomando los campos que lleno el cliente
         let usuario = {
             nombre: req.body.name,
             apellido:req.body.last,
@@ -23,25 +25,25 @@ let userController = {
         
         let lectura = fs.readFileSync(path.join(__dirname, '../data/user.json'), {encoding:'utf-8'})
         
+        //definir la variable que vamos a mandar al JSON
         let usuarios
-
+        //validar si la variable tiene algo o no y actuar en consecuencia
         if (lectura == ""){
             usuarios = []
         }else{
             usuarios = JSON.parse(lectura)
         }
 
+        //sumar el nuevo usuario al JSON existente
         usuarios.push(usuario)
 
+        //volveer a convertir el objeto en JSON
         usuariosJSON = JSON.stringify(usuarios)
 
+        //reescribir el JSON ahora con todos los usuarios
         fs.writeFileSync(path.join(__dirname, '../data/user.json'),usuariosJSON)
        
 
-       /* let usuarioJSON = JSON.stringify(usuario)
-
-        fs.appendFileSync(path.join(__dirname, '../data/user.json'),usuarioJSON)
-*/
         res.render('exito')
     
     },
