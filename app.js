@@ -5,11 +5,12 @@ const port = process.env.PORT || 3050
 const productsRoutes = require ('./routes/productRoutes.js')
 const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
+
 //esto no vi cuando llamarlos o instalarlos lo saco del proyecto planets
 //Preguntarle a los profes si vienen o hay que instalarlos aparte(yo los instale por las dudas)
 const logger = require('morgan');
 const methodOverride = require('method-override');
-
+const multer = require('multer')
 // Poder usar PUT PATCH & DELETE
 app.use(methodOverride('_method'))
 

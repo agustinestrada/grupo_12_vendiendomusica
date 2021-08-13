@@ -3,10 +3,12 @@ const path = require('path')
 
 
 module.exports = {
+    filename: path.join(__dirname, '../data/user.json'),
+
     createUser(usuario){
         //leer la data
         
-        let lectura = fs.readFileSync(path.join(__dirname, '../data/user.json'), 'utf-8')
+        let lectura = fs.readFileSync(this.filename, 'utf-8')
         
         //definir la variable que vamos a mandar al JSON
         let usuarios
@@ -24,10 +26,10 @@ module.exports = {
         usuariosJSON = JSON.stringify(usuarios,null,2)
 
         //reescribir el JSON ahora con todos los usuarios
-        fs.writeFileSync(path.join(__dirname, '../data/user.json'),usuariosJSON)
+        fs.writeFileSync(path.join(this.filename),usuariosJSON)
         
-        //userModel.createUser()
 
 
-    }
+    },
+
 }
