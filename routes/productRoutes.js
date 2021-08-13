@@ -20,13 +20,13 @@ const upload = multer({ storage })
 const productsController = require('../controllers/productsController')
 
 productsRouter.get('/productCart', productsController.checkout )
-productsRouter.get('/productDetail/:id', productsController.detail )
-productsRouter.get('/productList', productsController.list )
+productsRouter.get('/detail/:id', productsController.detail )
+productsRouter.get('/list', productsController.list )
 //Create
-productsRouter.get('/productCreate', productsController.create )
-productsRouter.post('/productCreate',upload.single('image'), productsController.store )
+productsRouter.get('/create', productsController.create )
+productsRouter.post('/create',upload.single('image'), productsController.store )
 //update
-productsRouter.get('/edit/:id?', productsController.edit);
+productsRouter.get('/:id/edit', productsController.edit);
 productsRouter.put('/:id',upload.single('image'), productsController.update);
 //delete
 productsRouter.delete('/:id', productsController.destroy)

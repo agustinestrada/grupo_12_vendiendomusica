@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,13 +24,5 @@
   "bugs": {
     "url": "https://github.com/agustinestrada/grupo_12_vendiendomusica/issues"
   },
-  "homepage": "https://github.com/agustinestrada/grupo_12_vendiendomusica#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "method-override": "^3.0.0",
-    "multer": "^1.4.3",
-    "nodemon": "^2.0.12"
-  }
+  "homepage": "https://github.com/agustinestrada/grupo_12_vendiendomusica#readme"
 }
