@@ -1,1 +1,12 @@
-[{"nombre":"asd","apellido":"asdf","email":"ce@gmail.com"},{"nombre":"agus","apellido":"estrada","email":"agus_estrada@live.com.ar"},{"nombre":"la","apellido":"la","email":"estas@gmail.com"}]
+[
+  {
+    "nombre": "asdf",
+    "apellido": "asdf",
+    "email": "agus_estrada@live.com.ar"
+  },
+  {
+    "nombre": "asdf",
+    "apellido": "wer",
+    "email": "espamea.tranqui@gmail.com"
+  }
+]
