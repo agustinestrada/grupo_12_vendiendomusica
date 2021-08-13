@@ -5,10 +5,15 @@ const port = process.env.PORT || 3050
 const productsRoutes = require ('./routes/productRoutes.js')
 const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
+const methodOverride = require('method-override')
+
 
 app.listen(port,() =>{
     console.log('El servidor se inicio correctamente en el puerto 3050');
 })
+// Poder usar PUT PATCH & DELETE
+app.use(methodOverride('_method'))
+
 // definimos la arpera que devuelve los archivos estaticos
 app.use(express.static('public'))
 // No olvidarse esto para que la data se envie correctamente desde un formulario
