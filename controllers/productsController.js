@@ -32,7 +32,7 @@ const productsController = {
             descripcion
         }
         const productCreated = productModel.create(product);
-            res.redirect('./products/detail/' + productCreated.id);
+            res.redirect('./Detail/' + productCreated.id);
          },
     edit: (req, res) => {
         const product = productModel.findByPK(req.params.id);
