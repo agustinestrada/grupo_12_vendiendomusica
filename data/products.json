@@ -95,19 +95,5 @@
     "category": "asdf",
     "descripcion": "asdf",
     "id": 13
-  },
-  {
-    "productName": "asdf",
-    "price": "1234",
-    "category": "asdf",
-    "descripcion": "asdf",
-    "id": 14
-  },
-  {
-    "productName": "hola fer",
-    "price": "10",
-    "category": "tennis",
-    "descripcion": "raqueta",
-    "id": 15
   }
 ]

@@ -53,7 +53,7 @@ const productsController = {
         const id = req.params.id;
 
         productModel.destroy(id);
-        res.redirect('products/list');
+        res.redirect('./list');
         
     },
 
