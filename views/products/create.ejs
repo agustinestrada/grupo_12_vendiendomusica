@@ -8,7 +8,7 @@
 			<div class="titulo"><h1>Subi tu producto</h1></div>
                 <div class="division-ppal">
                     <div class="formulario-columna">
-                    <form action="/products/create" method="POST" class="main-formulario"> 
+                    <form action="/products/create" method="POST" class="main-formulario" enctype="multipart/form-data"> 
 
                         <div class="etiqueta-formulario">
                             <label for="name">Nombre de producto</label>
@@ -26,7 +26,7 @@
                         </div>
 
                         <div class="etiqueta-formulario">
-                            <label for="product-image">Imagen</label>
+                            <label for="productImage">Imagen</label>
                             <input type="file" name="productImage" id="productImage">
                         </div>
 

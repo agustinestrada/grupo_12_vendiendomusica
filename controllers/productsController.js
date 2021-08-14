@@ -23,17 +23,21 @@ const productsController = {
         res.render('./products/create', {product}) 
     },
     store: (req,res) =>{
+         
+        const productImage ='/img/prodIMG/' + req.file.filename
+
         //creo el objeto
         const {name, price, category, descripcion} = req.body;
         const product = {
             name,
             price,
             category,
+            productImage,
             descripcion
         }
         const productCreated = productModel.create(product);
             res.redirect('./Detail/' + productCreated.id);
-         },
+        },
     edit: (req, res) => {
         const product = productModel.findByPK(req.params.id);
         
