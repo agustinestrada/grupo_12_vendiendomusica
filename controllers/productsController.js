@@ -24,9 +24,9 @@ const productsController = {
     },
     store: (req,res) =>{
         //creo el objeto
-        const {productName, price, category, descripcion} = req.body;
+        const {name, price, category, descripcion} = req.body;
         const product = {
-            productName,
+            name,
             price,
             category,
             descripcion

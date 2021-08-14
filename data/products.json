@@ -95,5 +95,24 @@
     "category": "asdf",
     "descripcion": "asdf",
     "id": 13
+  },
+  {
+    "price": "123",
+    "category": "adsf",
+    "descripcion": "asdf",
+    "id": 14
+  },
+  {
+    "price": "123",
+    "category": "adsf",
+    "descripcion": "asdf",
+    "id": 15
+  },
+  {
+    "name": "fer",
+    "price": "14243",
+    "category": "tennis",
+    "descripcion": "asdf",
+    "id": 16
   }
 ]
