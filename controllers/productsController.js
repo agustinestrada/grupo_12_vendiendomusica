@@ -7,7 +7,7 @@ const productsController = {
         //Traemos el id desde la url(parametro)
         const { id } = req.params;
         const productDetail = productModel.findByPK(id)
-        console.log(productDetail)
+        //console.log(productDetail)
         //const id = req.params.id
         
          res.render('./products/detail', {productDetail} )

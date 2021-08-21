@@ -8,19 +8,11 @@
     "descripcion": "ipsum lorem"
   },
   {
-    "name": "FER",
-    "price": "20",
-    "category": "raqueta",
-    "image": "/img/prodIMG/1629509310337.jpg",
-    "descripcion": "tennis",
-    "id": 11
-  },
-  {
-    "name": "asdf",
-    "price": "2134",
-    "category": "adf",
-    "image": "/img/prodIMG/1629510229287.jpg",
-    "descripcion": "asfdg",
-    "id": 12
+    "name": "Piano 1/4 Cola",
+    "price": "11100000",
+    "category": "piano",
+    "image": "/img/prodIMG/1629558308461.png",
+    "descripcion": "1",
+    "id": 2
   }
 ]
