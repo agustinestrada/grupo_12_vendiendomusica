@@ -15,6 +15,9 @@ const {check, validationResult, body } = require('express-validator')
 usersRouter.get('/login', userController.login)
 usersRouter.get('/register', userController.register)
 usersRouter.get('/contact', userController.contacto)
+//ruta de prueba
+usersRouter.get('/', userController.list)
+
 
 // Rutas por POST
 usersRouter.post('/register',userValidation.register,userController.storageUser)

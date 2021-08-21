@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const userModel = require('../models/usersModel.js')
+const db = require('../database/models/index')
 
 let userController = {
     login: (req, res) => {
@@ -30,7 +31,17 @@ let userController = {
         res.render('exito')
     
     },
-    logeo:(req, res) => {}
+    logeo:(req, res) => {
+
+    },
+    list:(req,res)=>{
+       db.Usuarios.findAll()
+        .then(function(lista){
+            res.render('./user/usuario-vista', {lista})
+        })
+    
+       
+    }
 
 }
 
