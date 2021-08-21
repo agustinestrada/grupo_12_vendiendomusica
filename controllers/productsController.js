@@ -24,7 +24,7 @@ const productsController = {
     },
     store: (req,res) =>{
          
-        const productImage ='/img/prodIMG/' + req.file.filename
+        const image ='/img/prodIMG/' + req.file.filename
 
         //creo el objeto
         const {name, price, category, descripcion} = req.body;
@@ -32,7 +32,7 @@ const productsController = {
             name,
             price,
             category,
-            productImage,
+            image,
             descripcion
         }
         const productCreated = productModel.create(product);
