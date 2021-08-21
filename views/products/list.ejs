@@ -14,10 +14,12 @@
             <div class="articulos">
                     <% productList.forEach((product) => { %>
                         <article class="articulo">
-                            <img class="imagen-promo" src="<%= product.image %>" alt="" width="100%"></a>
-                            <h3>
-                                <a href="/products/Detail/<%= product.id %> "><%= product.name %> </a>
-                            </h3>
+                            <a href="/products/Detail/<%= product.id %> ">
+                                <img class="imagen-promo" src="<%= product.image %>" alt="" width="100%">
+                                <h3>
+                                <%= product.name %>
+                                </h3>
+                            </a>
                         </article>        
                     <% }) %>
                 
