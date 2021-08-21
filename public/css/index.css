@@ -17,14 +17,6 @@ body{
     flex-direction: row-reverse;
 }
 
-.nav-bar-espaciado{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 50%;
-}
-
 .adentro-section-vertical{
     display: flex;
     flex-direction: column;
