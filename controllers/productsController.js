@@ -20,29 +20,27 @@ const productsController = {
                 )    
     },
     create: (req,res) => {
-        const product = productModel.findByPK(req.params.id);
-        res.render('./products/create', {product}) 
+        res.render('./products/create') 
     },
-    store: (req,res) =>{
-         
-        const image ='/img/prodIMG/' + req.file.filename
+    store: (req,res) =>{ 
+        const imagen ='/img/prodIMG/' + req.file.filename
 
-        //creo el objeto
-        const {name, price, category, descripcion} = req.body;
-        const product = {
-            name,
-            price,
-            category,
-            image,
-            descripcion
-        }
-        const productCreated = productModel.create(product);
-            res.redirect('./Detail/' + productCreated.id);
+        db.Producto.create({
+            nombre: req.body.nombre,
+            precio:req.body.precio,
+            categoria:req.body.categoria,
+            imagen:imagen,
+            descripcion:req.body.descripcion
+        })
+        .then(function(product){
+            res.redirect('./list', {product})
+        })
         },
     edit: (req, res) => {
-        const product = productModel.findByPK(req.params.id);
-        
-        res.render('./products/edit', { product });
+            db.Producto.findByPk(req.params.id)
+                .then(product=> {
+                    res.render('./products/edit', { product })
+                })
     },
     update: (req, res) =>{
         //requerimos la data del body

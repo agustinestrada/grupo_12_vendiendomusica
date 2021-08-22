@@ -24,10 +24,10 @@ productsRouter.get('/detail/:id', productsController.detail )
 productsRouter.get('/list', productsController.list )
 //Create
 productsRouter.get('/create', productsController.create )
-productsRouter.post('/create',upload.single('productImage'), productsController.store )
+productsRouter.post('/create',upload.single('imagen'), productsController.store )
 //update
 productsRouter.get('/:id/edit', productsController.edit);
-productsRouter.put('/:id',upload.single('productImage'), productsController.update);
+productsRouter.post('/:id',upload.single('productImage'), productsController.update);
 //delete
 productsRouter.delete('/:id', productsController.destroy)
 

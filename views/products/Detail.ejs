@@ -3,48 +3,42 @@
 <body>
     <%- include('../parcials/header.ejs') %>
 
-    <main>
-        <section class="contenedo-main">
-            <div class="columnas">
-                <% if (detalle == null) {%>
-                Ups no encontramos ese producto.
-            <% } %>
-                    <!-- esto lo hago con ejs desde el front-->
-                <!--<section class="columna1">
-                    <div class="shadow"><img src="/img/detalle/1.jpg" alt=""></div>
-                    <div class="shadow"><img src="/img/detalle/2.jpg" alt=""></div>
-                    <div class="shadow"><img src="/img/detalle/5.jpg" alt=""></div>
-                    <div class="shadow"><img src="/img/detalle/4.jpg" alt=""></div>
-                </section> -->
-                <section class="columna2">
-                    <!-- cambiar la imagen con ejs-->
-                    <div class="shadow"><img src=" <%= detalle.imagen%> " width="100%"></div>
-                </section>
-                <section class="columna3">
-                    <div>
-                        <span class="nombre"><%= detalle.nombre %></span><br>
-                    </div>
-                    <div class="precio">
-                        <span><strong><%= detalle.precio %></strong></span>
-                    </div>
-                    <a href="/products/<%= detalle.id %>/edit">
-                        <button>Edit</button>
-                    </a>
-                    <form action="/products/<%= detalle.id %>?_method=DELETE" method="POST">
-                        <button type="submit">Delete</button>
-                    </form>
-                    <div class="medios-de-pago">
-                        <span> <strong> Medios de Pago</strong></span><br>
-                        <img src="/img/Index/pago.jpg" alt width="100%">
-                    </div>
-                                        <div class="compra"> 
-                        <button class="botones-compra">Comprar Ahora</button>
-                        <button class="botones-carrito">Agregar a la Bolsa</button>
-                    </div>
-                </section>
-            </div>
-        </section>
-    </main>
+<main>
+    <section class="contenedo-main">
+        <div class="columnas">
+            <% if (detalle == null) {%>
+            Ups no encontramos ese producto.
+        <% } %>
+
+            <section class="columna2">
+                <!-- cambiar la imagen con ejs-->
+                <div class="shadow"><img src="<%= product.imagen %> " width="100%"></div>
+            </section>
+            <section class="columna3">
+                <div>
+                    <span class="nombre"><%= product.nombre %></span><br>
+                </div>
+                <div class="precio">
+                    <span><strong><%= product.precio %></strong></span>
+                </div>
+                <a href="/products/<%= product.id %>/edit">
+                    <button>Edit</button>
+                </a>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                    <button type="submit">Delete</button>
+                </form>
+                <div class="medios-de-pago">
+                    <span> <strong> Medios de Pago</strong></span><br>
+                    <img src="/img/Index/pago.jpg" alt width="100%">
+                </div>
+                                    <div class="compra"> 
+                    <button class="botones-compra">Comprar Ahora</button>
+                    <button class="botones-carrito">Agregar a la Bolsa</button>
+                </div>
+            </section>
+        </div>
+    </section>
+</main>
 
     <%- include('../parcials/footer.ejs') %>
 
