@@ -15,7 +15,7 @@ const multer = require('multer')
 app.use(methodOverride('_method'))
 
 app.listen(port,() =>{
-    console.log('El servidor se inicio correctamente en el puerto 3050');
+    console.log('El servidor se inicio correctamente en el puerto ' + port);
 })
 
 // definimos la arpera que devuelve los archivos estaticos

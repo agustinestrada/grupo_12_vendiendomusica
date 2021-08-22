@@ -6,31 +6,31 @@
     <main>
         <section class="contenedo-main">
             <div class="columnas">
-                <% if (productDetail == null) {%>
+                <% if (detalle == null) {%>
                 Ups no encontramos ese producto.
             <% } %>
                     <!-- esto lo hago con ejs desde el front-->
                 <!--<section class="columna1">
-                    <div class="shadow"><img src="/img/productDetail/1.jpg" alt=""></div>
-                    <div class="shadow"><img src="/img/productDetail/2.jpg" alt=""></div>
-                    <div class="shadow"><img src="/img/productDetail/5.jpg" alt=""></div>
-                    <div class="shadow"><img src="/img/productDetail/4.jpg" alt=""></div>
+                    <div class="shadow"><img src="/img/detalle/1.jpg" alt=""></div>
+                    <div class="shadow"><img src="/img/detalle/2.jpg" alt=""></div>
+                    <div class="shadow"><img src="/img/detalle/5.jpg" alt=""></div>
+                    <div class="shadow"><img src="/img/detalle/4.jpg" alt=""></div>
                 </section> -->
                 <section class="columna2">
                     <!-- cambiar la imagen con ejs-->
-                    <div class="shadow"><img src=" <%= productDetail.image%> " width="100%"></div>
+                    <div class="shadow"><img src=" <%= detalle.imagen%> " width="100%"></div>
                 </section>
                 <section class="columna3">
                     <div>
-                        <span class="nombre"><%= productDetail.name %></span><br>
+                        <span class="nombre"><%= detalle.nombre %></span><br>
                     </div>
                     <div class="precio">
-                        <span><strong><%= productDetail.price %></strong></span>
+                        <span><strong><%= detalle.precio %></strong></span>
                     </div>
-                    <a href="/products/<%= productDetail.id %>/edit">
+                    <a href="/products/<%= detalle.id %>/edit">
                         <button>Edit</button>
                     </a>
-                    <form action="/products/<%= productDetail.id %>?_method=DELETE" method="POST">
+                    <form action="/products/<%= detalle.id %>?_method=DELETE" method="POST">
                         <button type="submit">Delete</button>
                     </form>
                     <div class="medios-de-pago">

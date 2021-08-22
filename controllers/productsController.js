@@ -1,22 +1,22 @@
 const productModel = require('../models/productModel')
+const db = require('../database/models/index')
+
 const productsController = {
     checkout: (req, res) =>{
             res.render('./products/productCart')
     },
     detail:(req, res) => {
-        //Traemos el id desde la url(parametro)
-        const { id } = req.params;
-        const productDetail = productModel.findByPK(id)
-        //console.log(productDetail)
-        //const id = req.params.id
-        
-         res.render('./products/detail', {productDetail} )
-                    
+        db.Producto.findByPk(req.params.id)
+            .then(function(detalle){
+                res.render('./products/Detail', {detalle})
+            })
     },
     list: (req,res) => {
-        const productList = productModel.findAll()
-        //console.log(productList)
-        res.render('./products/list', { productList })
+        db.Producto.findAll()
+            .then(function(productList){
+                res.render('./products/list', { productList })
+                    }
+                )    
     },
     create: (req,res) => {
         const product = productModel.findByPK(req.params.id);
