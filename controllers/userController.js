@@ -17,19 +17,13 @@ let userController = {
     
     storageUser:(req, res) => {
         //construir un nuevo usuario tomando los campos que lleno el cliente
-        const {nombre, apellido, email,contraseña} = req.body
-
-        const usuario = {
-            nombre,
-            apellido,
-            email,
-            contraseña
-        }
-
-        userModel.createUser(usuario)
-
-
-        res.render('exito')
+        db.Usuarios.create({
+            nombre:req.body.nombre ,
+            apellido: req.body.apellido,
+            email: req.body.email,
+            password: req.body.password
+        })
+            .then(res.redirect('/user'))
     
     },
     logeo:(req, res) => {
