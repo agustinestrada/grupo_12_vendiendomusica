@@ -6,25 +6,22 @@
 <main>
     <section class="contenedo-main">
         <div class="columnas">
-            <% if (detalle == null) {%>
-            Ups no encontramos ese producto.
-        <% } %>
 
             <section class="columna2">
                 <!-- cambiar la imagen con ejs-->
-                <div class="shadow"><img src="<%= product.imagen %> " width="100%"></div>
+             <div class="shadow"><img src="<%= producto.imagen %> " width="100%"></div>
             </section>
             <section class="columna3">
                 <div>
-                    <span class="nombre"><%= product.nombre %></span><br>
+                    <span class="nombre"><%= producto.nombre %></span><br>
                 </div>
                 <div class="precio">
-                    <span><strong><%= product.precio %></strong></span>
+                    <span><strong><%= producto.precio %></strong></span>
                 </div>
-                <a href="/products/<%= product.id %>/edit">
+                <a href="/products/<%= producto.id %>/edit">
                     <button>Edit</button>
                 </a>
-                <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                <form action="/products/<%= producto.id %>?_method=DELETE" method="POST">
                     <button type="submit">Delete</button>
                 </form>
                 <div class="medios-de-pago">

@@ -8,8 +8,8 @@ const productsController = {
     },
     detail:(req, res) => {
         db.Producto.findByPk(req.params.id)
-            .then(function(detalle){
-                res.render('./products/Detail', {detalle})
+            .then(function(producto){
+                res.render('./products/Detail', {producto})
             })
     },
     list: (req,res) => {
