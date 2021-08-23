@@ -1,5 +1,6 @@
-const productModel = require('../models/productModel')
+//const productModel = require('../models/productModel')
 const db = require('../database/models/index')
+//const { fileName } = require('../models/productModel')
 
 const productsController = {
     checkout: (req, res) =>{
@@ -21,18 +22,20 @@ const productsController = {
     create: (req,res) => {
         res.render('./products/create') 
     },
-    store: (req,res) =>{ 
-        const imagen ='/img/prodIMG/' + req.file.filename
-
+    store: (req,res) =>{
+       // imagen = '/img/prodIMG' + Date.now() + req.file.originalname.slice(-4)
         db.Producto.create({
             nombre: req.body.nombre,
             precio:req.body.precio,
             categoria:req.body.categoria,
-            imagen:imagen,
+            imagen:req.file.filename ,
             descripcion:req.body.descripcion
         })
         .then(function(product){
-            res.redirect('./list', {product})
+            res.redirect('/products/list')
+        })
+        .catch(function(error){
+            res.send(error)
         })
         },
     edit: (req, res) => {
@@ -42,6 +45,19 @@ const productsController = {
                 })
     },
     update: (req, res) =>{
+
+        const imagen = './img/prodIMG' + Date.now() + req.file.originalname.slice(-4)
+
+        db.Producto.update({
+            nombre: req.body.nombre,
+            precio:req.body.precio,
+            categoria:req.body.categoria,
+            imagen: req.filename,
+            descripcion:req.body.descripcion
+        })
+        .then((producto)=>{
+            res.redirect('/products/detail/' + id, {producto})
+        })
         //requerimos la data del body
         const data = req.body;
         //el id no nos viene en el body, lo pedimos por params
@@ -49,14 +65,15 @@ const productsController = {
 
         productModel.update(data, id);
 
-        res.redirect('/products/detail/' + id);
+        ;
     },
     destroy: (req, res) =>{
-        const id = req.params.id;
+        const id = req.params.id
 
-        productModel.destroy(id);
-        res.redirect('./list');
-        
+        db.Producto.destroy({
+            where: {id}
+        })
+        .then(res.redirect('/products/List'))
     },
 
     }

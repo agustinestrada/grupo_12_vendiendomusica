@@ -1,6 +1,4 @@
-const fs = require('fs')
-const path = require('path')
-const userModel = require('../models/usersModel.js')
+
 const db = require('../database/models/index')
 
 let userController = {

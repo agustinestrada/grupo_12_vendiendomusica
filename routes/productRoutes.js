@@ -27,7 +27,7 @@ productsRouter.get('/create', productsController.create )
 productsRouter.post('/create',upload.single('imagen'), productsController.store )
 //update
 productsRouter.get('/:id/edit', productsController.edit);
-productsRouter.post('/:id',upload.single('productImage'), productsController.update);
+productsRouter.post('/:id',upload.single('imagen'), productsController.update);
 //delete
 productsRouter.delete('/:id', productsController.destroy)
 

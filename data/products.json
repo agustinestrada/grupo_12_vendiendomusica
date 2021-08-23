@@ -1,18 +1,2 @@
 [
-  {
-    "id": 1,
-    "name": "pepe",
-    "price": "1000",
-    "category": "pape",
-    "image": "/img/productDetail/Main-guitarra.jpg",
-    "descripcion": "ipsum lorem"
-  },
-  {
-    "name": "Piano 1/4 Cola",
-    "price": "11100000",
-    "category": "piano",
-    "image": "/img/prodIMG/1629558308461.png",
-    "descripcion": "1",
-    "id": 2
-  }
 ]
