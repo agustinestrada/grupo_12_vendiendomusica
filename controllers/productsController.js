@@ -1,6 +1,5 @@
 const productModel = require('../models/productModel')
 const db = require('../database/models/index')
-const Op = db.Sequelize.Op
 
 const productsController = {
     checkout: (req, res) =>{
