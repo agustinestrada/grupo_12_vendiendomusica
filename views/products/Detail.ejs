@@ -9,14 +9,14 @@
 
             <section class="columna2">
                 <!-- cambiar la imagen con ejs-->
-             <div class="shadow"><img src="<%= producto.imagen %> " width="100%"></div>
+             <div class="imagen"><img src="/img/prodIMG/<%= producto.imagen %> " width="100%"></div>
             </section>
             <section class="columna3">
                 <div>
                     <span class="nombre"><%= producto.nombre %></span><br>
                 </div>
                 <div class="precio">
-                    <span><strong><%= producto.precio %></strong></span>
+                    <span><strong>$<%= producto.precio %></strong></span>
                 </div>
                 <a href="/products/<%= producto.id %>/edit">
                     <button>Edit</button>

@@ -58,10 +58,11 @@ main{
     margin-left: 10px;
 }
 
-.shadow{
+.imagen{
     border: solid 1px rgb(185, 185, 185);
     border-radius: 5px;
     box-shadow: 7px 5px 10px rgb(185, 185, 185);
+    width: 600px;
 }
 
 .ingresa{
