@@ -16,6 +16,10 @@ footer .logo {
     color: white;
 }
 
+footer p{
+    margin-top: 35px;
+}
+
 .nav-bar-footer {
     font-size: 15px;
     display: flex;
@@ -27,7 +31,6 @@ footer .logo {
 }
 
 .derechos {
-    margin-bottom: 0px;
     padding: 0px 0px 10px 10px;
     font-size: 0.8rem;
     opacity: 0.5;
@@ -36,7 +39,6 @@ footer .logo {
 .moblile{
     display: none;
 }
-
 
 /*TELEFONO*/
 
