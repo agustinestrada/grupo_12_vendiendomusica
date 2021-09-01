@@ -46,8 +46,6 @@ const productsController = {
     },
     update: (req, res) =>{
 
-        const imagen = './img/prodIMG' + Date.now() + req.file.originalname.slice(-4)
-
         db.Producto.update({
             nombre: req.body.nombre,
             precio:req.body.precio,
@@ -56,16 +54,8 @@ const productsController = {
             descripcion:req.body.descripcion
         })
         .then((producto)=>{
-            res.redirect('/products/detail/' + id, {producto})
+            res.redirect('/products/detail/' + req.params.id, {producto})
         })
-        //requerimos la data del body
-        const data = req.body;
-        //el id no nos viene en el body, lo pedimos por params
-        const { id } = req.params;
-
-        productModel.update(data, id);
-
-        ;
     },
     destroy: (req, res) =>{
         const id = req.params.id
