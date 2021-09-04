@@ -10,10 +10,9 @@ const validationCreateProduct = [
     .withMessage('El nombre debe tener un minimo de 5 caracateres'),
 
     body('precio')
-    .notEmpty()
+    .isNumeric()
     .withMessage('Por favor ingrese el precio del producto') 
     .bail()
-    .isNumber()
     .withMessage('El valor debe ser expresado en numeros'),
     
     body('categoria')
