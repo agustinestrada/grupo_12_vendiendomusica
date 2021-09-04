@@ -9,12 +9,18 @@
 		<section class="main-contenedor">
 			<div><h1>Registrate</h1></div>
 			<form action="/user/register" method="POST" class="main-formulario"> 
+				<% if(locals.errors){ 
+					 errors.forEach(error => { %>
+					<p><%= error.msg  %> </p>
+				<% })
+				}
+				%> 
 				
 				<div class="formulario">
 					<div class="nombre-y-apellido">
 						<div class="etiqueta-formulario3">
 							<label for="name">Nombre</label>
-							<input type="text" name="nombre" id="name">
+							<input type="text" name="nombre" id="name" value="<%= locals.old && old.nombre ? old.nombre :  ''%>">
 						</div>
 						<div class="etiqueta-formulario2">
 							<label for="last-name">Apellido</label>

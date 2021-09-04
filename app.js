@@ -5,6 +5,7 @@ const port = process.env.PORT || 3050
 const productsRoutes = require ('./routes/productRoutes.js')
 const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
+const userMiddleware = require('./middlewares/userMiddleware')
 
 //esto no vi cuando llamarlos o instalarlos lo saco del proyecto planets
 //Preguntarle a los profes si vienen o hay que instalarlos aparte(yo los instale por las dudas)
@@ -37,7 +38,7 @@ app.use(logger('dev'));
 // productos
 app.use('/products', productsRoutes)
 // usuarios
-app.use('/user', userRoutes)
+app.use('/user', userMiddleware, userRoutes)
 // home
 app.use('/', mainRoutes)
 

@@ -1,3 +1,5 @@
+const { validationResult} = require('express-validator')
+
 
 const db = require('../database/models/index')
 
@@ -13,15 +15,25 @@ let userController = {
     },
     
     storageUser:(req, res) => {
-        //construir un nuevo usuario tomando los campos que lleno el cliente
-        db.Usuarios.create({
-            nombre:req.body.nombre ,
-            apellido: req.body.apellido,
-            email: req.body.email,
-            password: req.body.password
-        })
+        let errores = validationResult(req)
+        
+        if(errores.isEmpty()){
+            //construir un nuevo usuario tomando los campos que lleno el cliente
+            db.Usuarios.create({
+                nombre:req.body.nombre ,
+                apellido: req.body.apellido,
+                email: req.body.email,
+                password: req.body.password
+            })
             .then(res.redirect('/user'))
-    
+        }else{
+            res.render('./user/register', { 
+                errors: errores.array(),
+                old: req.body
+            })
+        }
+
+        
     },
     logeo:(req, res) => {
 
