@@ -50,6 +50,14 @@ main{
 
 }
 
+.etiqueta-formulario2{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .ingresa-aca{
     align-self: center;
     font-size: 40px;

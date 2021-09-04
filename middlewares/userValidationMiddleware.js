@@ -1,12 +1,21 @@
 const path = require('path')
-const {check, validationResult, body } = require('express-validator')
+const {body } = require('express-validator')
 
 module.exports = {
     
     register: [
-        check('nombre').notEmpty().withMessage('Completa con tu nombre'),
-        check('apellido').notEmpty().withMessage('Completa con tu apellido'),
-        check('email').isEmail().withMessage('Por favor ingresa un email valido')
+        body('nombre')
+            .notEmpty()
+            .withMessage('Completa con tu nombre'),
+        body('apellido')
+            .notEmpty()
+            .withMessage('Completa con tu apellido'),
+        body('email')
+            .isEmail()
+            .withMessage('Por favor ingresa un email valido'),
+        body('clave')
+            .isLength({min:4})
+            .withMessage('la contraseña es demasiado corta')
     ],
     login: [
 

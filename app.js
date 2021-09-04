@@ -5,7 +5,6 @@ const port = process.env.PORT || 3050
 const productsRoutes = require ('./routes/productRoutes.js')
 const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
-const userMiddleware = require('./middlewares/userMiddleware')
 
 //Middlewares
 const notFoundMiddleware = require('./middlewares/notFound')
@@ -41,7 +40,7 @@ app.use(logger('dev'));
 // productos
 app.use('/products', productsRoutes)
 // usuarios
-app.use('/user', userMiddleware, userRoutes)
+app.use('/user', userRoutes)
 // home
 app.use('/', mainRoutes)
 

@@ -1,5 +1,5 @@
 const { validationResult} = require('express-validator')
-
+const bcrypt = require('bcryptjs')
 
 const db = require('../database/models/index')
 
@@ -16,14 +16,16 @@ let userController = {
     
     storageUser:(req, res) => {
         let errores = validationResult(req)
-        
+
+        let passHash = bcrypt.hashSync(req.body.clave)
+
         if(errores.isEmpty()){
             //construir un nuevo usuario tomando los campos que lleno el cliente
             db.Usuarios.create({
                 nombre:req.body.nombre ,
                 apellido: req.body.apellido,
                 email: req.body.email,
-                password: req.body.password
+                passwords: passHash
             })
             .then(res.redirect('/user'))
         }else{
