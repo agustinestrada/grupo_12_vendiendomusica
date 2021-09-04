@@ -7,6 +7,9 @@ const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
 const userMiddleware = require('./middlewares/userMiddleware')
 
+//Middlewares
+const notFoundMiddleware = require('./middlewares/notFound')
+
 //esto no vi cuando llamarlos o instalarlos lo saco del proyecto planets
 //Preguntarle a los profes si vienen o hay que instalarlos aparte(yo los instale por las dudas)
 const logger = require('morgan');
@@ -42,6 +45,8 @@ app.use('/user', userMiddleware, userRoutes)
 // home
 app.use('/', mainRoutes)
 
+//Middleware de pagina no encontrada
+app.use(notFoundMiddleware)
 
 app.use((req, res, next) => {
     res.status(404).render('404')

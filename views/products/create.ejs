@@ -12,27 +12,31 @@
 
                         <div class="etiqueta-formulario">
                             <label for="name">Nombre de producto</label>
-                            <input type="text" name="nombre" id="name">
+                            <input type="text" name="nombre" id="name" value="<% locals.oldValues && oldValues.nombre %> "/>
+                            <span class="msg-error"><% locals.errors && errors.nombre ? errors.nombre.msg : "" %> </span>
                         </div>
                         
                         <div class="etiqueta-formulario">
                             <label for="price">Precio</label>
-                            <input type="number" name="precio" id="price">
+                            <input type="number" name="precio" id="price" value="<% locals.oldValues && oldValues.precio  %> "/>
+                            <span class="msg-error"><% locals.errors && errors.precio ? errors.name.msg : "" %> </span>
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="category">Categoria</label>
-                            <input type="text" name="categoria" id="category">
+                            <input type="text" name="categoria" id="category" value="<% locals.oldValues && oldValues.categoria %> "/>
+                            <span class="msg-error"><% locals.errors && errors.categoria ? errors.categoria.msg : "" %> </span>
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="productImage">Imagen</label>
-                            <input type="file" name="imagen" id="productImage">
+                            <input type="file" name="imagen" id="productImage"/>
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="descripcion">Descripcion</label>
-                            <input class="descripcion" type="textarea" name="descripcion" id="descripcion">
+                            <input class="descripcion" type="textarea" name="descripcion" id="descripcion" value="<% locals.oldValues && oldValues.descripcion %> "/>
+                            <span class="msg-error"><% locals.errors && errors.descripcion ? errors.categoria.msg : "" %> </span>
                         </div>
 
                         <div class="botones">

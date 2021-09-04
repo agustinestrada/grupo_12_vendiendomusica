@@ -1,6 +1,7 @@
 //const productModel = require('../models/productModel')
 const db = require('../database/models/index')
 //const { fileName } = require('../models/productModel')
+const { validationResult } = require('express-validator')
 
 const productsController = {
     checkout: (req, res) =>{
@@ -24,6 +25,15 @@ const productsController = {
     },
     store: (req,res) =>{
        // imagen = '/img/prodIMG' + Date.now() + req.file.originalname.slice(-4)
+       const formValidation = validationResult(req)
+       //si encuentro un error devuelvo el formulario con los valores cargados y los errores
+       if (!formValidation.isEmpty()){
+        //errores
+        const oldValues = req.body
+        res.render('./products/create', {oldValues, errors: formValidation.mapped()}) 
+
+        return    
+       }
         db.Producto.create({
             nombre: req.body.nombre,
             precio:req.body.precio,

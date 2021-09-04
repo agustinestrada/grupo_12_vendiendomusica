@@ -3,6 +3,8 @@ const productsRouter = express.Router()
 const multer = require('multer');
 const path = require('path');
 
+const validationCreateProduct = require('../middlewares/validationCreateProduct')
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         const destinationPath = path.join(__dirname, '../public/img/prodIMG');
@@ -24,7 +26,7 @@ productsRouter.get('/detail/:id', productsController.detail )
 productsRouter.get('/list', productsController.list )
 //Create
 productsRouter.get('/create', productsController.create )
-productsRouter.post('/create',upload.single('imagen'), productsController.store )
+productsRouter.post('/create',upload.single('imagen'),validationCreateProduct, productsController.store )
 //update
 productsRouter.get('/:id/edit', productsController.edit);
 productsRouter.post('/:id',upload.single('imagen'), productsController.update);
