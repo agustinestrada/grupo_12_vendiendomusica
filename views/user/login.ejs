@@ -6,11 +6,19 @@
     <main>
         <section class="main-contenedor">
             <div class="ingresa-aca"><h1>Ingresá acá!</h1></div>
+
+            <% if(locals.errores){ 
+                errores.forEach(error => { %>
+               <p><%= error.msg  %> </p>
+           <% })
+           }
+           %> 
+
             <form action="/user/login" method="POST" class="main-formulario"> 
                     
                     <div class="etiqueta-formulario">
                         <label for="user">Email</label>
-                        <input type="email" name="email" id="user">
+                        <input type="text" name="email" id="user">
                     </div>
                     <div class="etiqueta-formulario">
                         <label for="password">Contraseña</label>

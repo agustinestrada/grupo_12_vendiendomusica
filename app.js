@@ -5,6 +5,7 @@ const port = process.env.PORT || 3050
 const productsRoutes = require ('./routes/productRoutes.js')
 const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
+const session = require('express-session')
 
 //Middlewares
 const notFoundMiddleware = require('./middlewares/notFound')
@@ -16,6 +17,11 @@ const methodOverride = require('method-override');
 const multer = require('multer')
 // Poder usar PUT PATCH & DELETE
 app.use(methodOverride('_method'))
+app.use(session({
+    secret:"sh es Secreto!",
+    resave: false,
+    saveUninitialized: false
+}))
 
 app.listen(port,() =>{
     console.log('El servidor se inicio correctamente en el puerto ' + port);

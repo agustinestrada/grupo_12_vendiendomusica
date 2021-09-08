@@ -1,5 +1,6 @@
 const path = require('path')
-const {body } = require('express-validator')
+const {body} = require('express-validator')
+const db = require('../database/models/index')
 
 module.exports = {
     
@@ -17,7 +18,9 @@ module.exports = {
             .isLength({min:4})
             .withMessage('la contraseña es demasiado corta')
     ],
-    login: [
-
+    validacionLogeo: [
+        body('email')
+            .isEmail()
+            .withMessage('Por favor ingresa un email valido')
     ]
 }
