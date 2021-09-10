@@ -12,6 +12,9 @@ let userController = {
         }
     },
     register: (req, res) => {
+        if (req.session.usuarioLogeado != undefined) {
+            res.redirect('/')
+        }
         res.render('./user/register')
     },
     contacto: (req, res) => {
@@ -64,8 +67,11 @@ let userController = {
         })
     
        
+    },
+    logout: (req, res)=>{
+        req.session.destroy()
+        res.redirect('/')
     }
-
 }
 
 module.exports = userController
