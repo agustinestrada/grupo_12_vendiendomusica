@@ -38,31 +38,11 @@ let userController = {
 
     logeo:(req, res) => {
         let errores = validationResult(req)
-
+    
         if(errores.isEmpty()){
-            const { email, password, recordame} = req.body
 
-            let usuarioALogearse = db.Usuarios.findOne({where:{email}})
-
-            .then(usuarioEncontradp =>{
+            res.send('Bienvenido/a ' + req.body.email)
                 
-            })
-            
-            
-            db.Usuarios.findOne({
-                where:{
-                    email
-                }
-            })
-            .then(usuarioBuscado => {
-                if(usuarioBuscado != null && usuarioBuscado != undefined){
-                    res.send('Bienvenido/a ' + usuarioBuscado.email)
-
-                }else{
-                    res.render('./user/login')
-                    
-                }
-            })
         }else{
             res.render('./user/login', {errores})
         }

@@ -7,12 +7,6 @@
         <section class="main-contenedor">
             <div class="ingresa-aca"><h1>Ingresá acá!</h1></div>
 
-            <% if(locals.errores){ 
-                errores.forEach(error => { %>
-               <p><%= error.msg  %> </p>
-           <% })
-           }
-           %> 
 
             <form action="/user/login" method="POST" class="main-formulario"> 
                     
