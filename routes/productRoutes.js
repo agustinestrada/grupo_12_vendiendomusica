@@ -32,6 +32,8 @@ productsRouter.get('/:id/edit', productsController.edit);
 productsRouter.post('/:id',upload.single('imagen'), productsController.update);
 //delete
 productsRouter.delete('/:id', productsController.destroy)
+//Buscador
+productsRouter.get('/buscar', productsController.buscar)
 
 
 module.exports = productsRouter;

@@ -27,7 +27,7 @@ module.exports = {
                     }
                 })
 
-                // chequear que userFound exista
+                // chequear que userFound no este registrado
                 if (userFound) {
                     return Promise.reject('El usuario ya existe')
                     }else{

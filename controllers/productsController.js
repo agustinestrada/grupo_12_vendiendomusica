@@ -2,6 +2,7 @@
 const db = require('../database/models/index')
 //const { fileName } = require('../models/productModel')
 const { validationResult } = require('express-validator')
+const Op = db.Sequelize.Op
 
 const productsController = {
     checkout: (req, res) =>{
@@ -75,7 +76,14 @@ const productsController = {
         })
         .then(res.redirect('/products/List'))
     },
-
+    buscar: (req,res) => {
+        let busqueda = req.query.busqueda
+        db.Producto.findAll({where:{nombre:{[Op.like]:'%'+busqueda+'%'}}})
+            .then(function(productList){
+                res.render('./products/buscar', { productList })
+                    }
+                )    
+    }
     }
 
 
