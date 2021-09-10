@@ -21,5 +21,8 @@ usersRouter.get('/', userController.list)
 usersRouter.post('/register',userValidation.register,userController.storageUser)
 usersRouter.post('/login', userValidation.validacionLogeo ,userController.logeo)
 
+usersRouter.get('/session',(req, res)=>{
+    res.send(req.session.usuarioLogeado)
+})
 
 module.exports = usersRouter;

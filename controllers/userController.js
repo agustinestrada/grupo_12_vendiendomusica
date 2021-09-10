@@ -5,7 +5,11 @@ const db = require('../database/models/index')
 
 let userController = {
     login: (req, res) => {
-        res.render('./user/login')
+        if(req.session.usuarioLogeado != undefined){
+            res.redirect('/')
+        }else{
+            res.render('./user/login')
+        }
     },
     register: (req, res) => {
         res.render('./user/register')
@@ -37,11 +41,16 @@ let userController = {
     },
 
     logeo:(req, res) => {
-        let errores = validationResult(req)
-    
-        if(errores.isEmpty()){
 
-            res.send('Bienvenido/a ' + req.body.email)
+        let errores = validationResult(req)
+        
+        if(errores.isEmpty()){
+            let email = req.body.email
+            
+            req.session.usuarioLogeado = email
+
+            res.redirect('/')
+            
                 
         }else{
             res.render('./user/login', {errores})
