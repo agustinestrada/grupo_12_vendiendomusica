@@ -16,7 +16,26 @@ module.exports = {
             .withMessage('Completa con tu apellido'),
         body('email')
             .isEmail()
-            .withMessage('Por favor ingresa un email valido'),
+            .withMessage('Por favor ingresa un email valido')
+            .custom(async (value, { req }) => {
+                const { email } = req.body
+                
+                // encontrar un usuario con el email
+                const userFound = await Usuarios.findOne({
+                    where: {
+                        email
+                    }
+                })
+
+                // chequear que userFound exista
+                if (userFound) {
+                    return Promise.reject('El usuario ya existe')
+                    }else{
+                        return true
+                    }
+                    
+                }
+            ),
         body('clave')
             .isLength({min:4})
             .withMessage('la contraseña es demasiado corta')
