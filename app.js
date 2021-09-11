@@ -6,6 +6,7 @@ const productsRoutes = require ('./routes/productRoutes.js')
 const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
 const session = require('express-session')
+const cookies = require('cookie-parser')
 
 //Middlewares
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
@@ -18,13 +19,19 @@ const methodOverride = require('method-override');
 const multer = require('multer')
 // Poder usar PUT PATCH & DELETE
 
+
 app.use(methodOverride('_method'))
+
 app.use(session({
     secret:"sh es Secreto!",
     resave: false,
     saveUninitialized: false
 }))
+app.use(cookies())
+
 app.use(userLoggedMiddleware)
+
+
 app.listen(port,() =>{
     console.log('El servidor se inicio correctamente en el puerto ' + port);
 })
@@ -35,8 +42,8 @@ app.use(express.static('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-//app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, '../public')));
+
+
 
 //view engine setuo
 app.set('view engine', 'ejs')

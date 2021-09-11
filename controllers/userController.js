@@ -1,4 +1,4 @@
-const { validationResult} = require('express-validator')
+const { validationResult, body} = require('express-validator')
 const bcrypt = require('bcryptjs')
 
 const db = require('../database/models/index')
@@ -41,14 +41,21 @@ let userController = {
     },
 
     logeo:(req, res) => {
-
+        
         let errores = validationResult(req)
         
         if(errores.isEmpty()){
             let email = req.body.email
-            
+
             req.session.usuarioLogeado = email
 
+            if (req.body.recordame) {
+                
+                res.cookie('emailUsuario', email, { maxAge: 1000 * 30 })
+                
+                res.redirect('/')
+
+            }
             res.redirect('/')
             
                 
@@ -70,6 +77,7 @@ let userController = {
         res.redirect('/')
     },
     profile: async(req, res)=>{
+        console.log(req.cookies.emailUsuario);
         let perfilUsuario = await db.Usuarios.findOne({where:{email: req.session.usuarioLogeado}})
            
             console.log(perfilUsuario)
