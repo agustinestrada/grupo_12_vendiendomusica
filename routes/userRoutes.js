@@ -12,6 +12,8 @@ usersRouter.get('/register', userController.register)
 
 usersRouter.get('/contact', userController.contacto)
 
+usersRouter.get('/profile', userController.profile)
+
 
 //ruta de prueba
 usersRouter.get('/', userController.list)

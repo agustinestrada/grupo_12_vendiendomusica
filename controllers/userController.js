@@ -71,6 +71,16 @@ let userController = {
     logout: (req, res)=>{
         req.session.destroy()
         res.redirect('/')
+    },
+    profile: (req, res)=>{
+        if (req.session.usuarioLogeado == undefined) {
+            res.redirect('/user/login')
+        }
+
+        /*let usuarioPerfil = db.Usuarios.findOne({where:{email: req.session.usuarioLogeado}})
+            .then()
+*/
+        res.render('./user/profile')
     }
 }
 
