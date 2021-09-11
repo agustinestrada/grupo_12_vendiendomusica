@@ -5,17 +5,14 @@ const db = require('../database/models/index')
 
 let userController = {
     login: (req, res) => {
-        if(req.session.usuarioLogeado != undefined){
-            res.redirect('/')
-        }else{
-            res.render('./user/login')
-        }
+        
+        res.render('./user/login')
+   
     },
     register: (req, res) => {
-        if (req.session.usuarioLogeado != undefined) {
-            res.redirect('/')
-        }
+       
         res.render('./user/register')
+    
     },
     contacto: (req, res) => {
         res.render('./user/contact')
@@ -73,15 +70,11 @@ let userController = {
         res.redirect('/')
     },
     profile: async(req, res)=>{
-        if (req.session.usuarioLogeado == undefined) {
-            res.redirect('/user/login')
-        }
-
-        let usuarioPerfil = await db.Usuarios.findOne({where:{email: req.session.usuarioLogeado}})
+        let perfilUsuario = await db.Usuarios.findOne({where:{email: req.session.usuarioLogeado}})
            
-            console.log(usuarioPerfil)
+            console.log(perfilUsuario)
 
-        res.render('./user/profile',{usuarioPerfil} )
+        res.render('./user/profile',{perfilUsuario} )
     }
 }
 

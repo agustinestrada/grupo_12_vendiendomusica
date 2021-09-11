@@ -8,6 +8,7 @@ const mainRoutes = require ('./routes/mainRoutes.js')
 const session = require('express-session')
 
 //Middlewares
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 const notFoundMiddleware = require('./middlewares/notFound')
 
 //esto no vi cuando llamarlos o instalarlos lo saco del proyecto planets
@@ -16,13 +17,14 @@ const logger = require('morgan');
 const methodOverride = require('method-override');
 const multer = require('multer')
 // Poder usar PUT PATCH & DELETE
+
 app.use(methodOverride('_method'))
 app.use(session({
     secret:"sh es Secreto!",
     resave: false,
     saveUninitialized: false
 }))
-
+app.use(userLoggedMiddleware)
 app.listen(port,() =>{
     console.log('El servidor se inicio correctamente en el puerto ' + port);
 })

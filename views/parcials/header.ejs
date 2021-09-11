@@ -11,15 +11,20 @@
             </form>
         </div>
 
-        <section class="botones">
-            <button class="ingresa"><a href="/user/profile">Perfil</a></button>
-            <button class="registrate"><a href="/user/logout">Salir</a></button>
-        </section>
+        <% if(locals.isLogged){ %> 
 
-        <section class="botones">
-            <button class="ingresa"><a href="/user/login">Ingresa</a></button>
-            <button class="registrate"><a href="/user/register">Registrate</a></button>
-        </section>
+            <section class="botones">
+                <button class="ingresa"><a href="/user/profile">Perfil</a></button>
+                <button class="registrate"><a href="/user/logout">Salir</a></button>
+            </section>
+
+        <% }else{ %> 
+            <section class="botones">
+                <button class="ingresa"><a href="/user/login">Ingresa</a></button>
+                <button class="registrate"><a href="/user/register">Registrate</a></button>
+            </section>
+        <% } %> 
+
     </section>
 
     <nav class="nav-bar2">

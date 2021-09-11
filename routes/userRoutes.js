@@ -2,17 +2,18 @@ const express = require('express')
 const usersRouter = express.Router()
 const userController = require('../controllers/userController')
 const userValidation = require('../middlewares/userValidationMiddleware')
-
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
 
 
 // Rutas por GET
-usersRouter.get('/login', userController.login)
+usersRouter.get('/login',guestMiddleware, userController.login)
 
-usersRouter.get('/register', userController.register)
+usersRouter.get('/register',guestMiddleware , userController.register)
 
 usersRouter.get('/contact', userController.contacto)
 
-usersRouter.get('/profile', userController.profile)
+usersRouter.get('/profile',authMiddleware, userController.profile)
 
 
 //ruta de prueba
