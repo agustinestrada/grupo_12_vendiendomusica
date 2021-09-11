@@ -25,13 +25,16 @@ const productsController = {
         res.render('./products/create') 
     },
     store: (req,res) =>{
-       // imagen = '/img/prodIMG' + Date.now() + req.file.originalname.slice(-4)
-       const formValidation = validationResult(req)
+       
+        // imagen = '/img/prodIMG' + Date.now() + req.file.originalname.slice(-4)
+       const errors = validationResult(req)
+      
        //si encuentro un error devuelvo el formulario con los valores cargados y los errores
-       if (!formValidation.isEmpty()){
+       if (!errors.isEmpty()){
+        
         //errores
         const oldValues = req.body
-        res.render('./products/create', {oldValues, errors: formValidation.mapped()}) 
+        res.render('./products/create', {oldValues, errors: errors.mapped()}) 
 
         return    
        }

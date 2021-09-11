@@ -72,15 +72,16 @@ let userController = {
         req.session.destroy()
         res.redirect('/')
     },
-    profile: (req, res)=>{
+    profile: async(req, res)=>{
         if (req.session.usuarioLogeado == undefined) {
             res.redirect('/user/login')
         }
 
-        /*let usuarioPerfil = db.Usuarios.findOne({where:{email: req.session.usuarioLogeado}})
-            .then()
-*/
-        res.render('./user/profile')
+        let usuarioPerfil = await db.Usuarios.findOne({where:{email: req.session.usuarioLogeado}})
+           
+            console.log(usuarioPerfil)
+
+        res.render('./user/profile',{usuarioPerfil} )
     }
 }
 
