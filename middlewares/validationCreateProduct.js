@@ -5,21 +5,17 @@ const validationCreateProduct = [
     body('name')
     .notEmpty()
     .withMessage('Por favor ingrese el nombre del producto')
-    .bail()
     .isLength({min: 5})
     .withMessage('El nombre debe tener un minimo de 5 caracateres'),
 
     body('precio')
-    .isNumeric()
-    .withMessage('Por favor ingrese el precio del producto') 
-    .bail()
+    .isNumeric() 
     .withMessage('El valor debe ser expresado en numeros'),
     
     body('categoria')
     .notEmpty()
     .withMessage('Por favor elija una categoria'),
-    //.bail()
-    //ver como puedo checkear dentro de las categorias que tengo
+   
     body('imagen')
     .custom((value, { req }) => {
         const { file } = req

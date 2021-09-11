@@ -8,23 +8,25 @@
 			<div class="titulo"><h1>Subi tu producto</h1></div>
                 <div class="division-ppal">
                     <div class="formulario-columna">
+
+
                     <form action="/products/create" method="POST" class="main-formulario" enctype="multipart/form-data"> 
 
                         <div class="etiqueta-formulario">
                             <label for="name">Nombre de producto</label>
-                            <input type="text" name="nombre" id="name" value="<% locals.oldValues && oldValues.nombre %> "/>
+                            <input type="text" name="nombre" id="name" value="<% locals.oldValues && oldValues.nombre %>"/>
                             <span class="msg-error"><% locals.errors && errors.nombre ? errors.nombre.msg : "" %> </span>
                         </div>
                         
                         <div class="etiqueta-formulario">
                             <label for="price">Precio</label>
-                            <input type="text" name="precio" id="price" value="<% locals.oldValues && oldValues.precio  %> "/>
+                            <input type="text" name="precio" id="price" value="<% locals.oldValues && oldValues.precio  %>"/>
                             <span class="msg-error"><% locals.errors && errors.precio ? errors.name.msg : "" %> </span>
                         </div>
 
                         <div class="etiqueta-formulario">
-                            <label for="category">Categoria</label>
-                            <input type="text" name="categoria" id="category" value="<% locals.oldValues && oldValues.categoria %> "/>
+                            <label for="categoria">Categoria</label>
+                            <input type="text" name="categoria" id="categoria" value="<% locals.oldValues && oldValues.categoria %>"/>
                             <span class="msg-error"><% locals.errors && errors.categoria ? errors.categoria.msg : "" %> </span>
                         </div>
 
@@ -35,7 +37,7 @@
 
                         <div class="etiqueta-formulario">
                             <label for="descripcion">Descripcion</label>
-                            <input class="descripcion" type="textarea" name="descripcion" id="descripcion" value="<% locals.oldValues && oldValues.descripcion %> "/>
+                            <input class="descripcion" type="textarea" name="descripcion" id="descripcion" value="<% locals.oldValues && oldValues.descripcion %>"/>
                             <span class="msg-error"><% locals.errors && errors.descripcion ? errors.categoria.msg : "" %> </span>
                         </div>
 

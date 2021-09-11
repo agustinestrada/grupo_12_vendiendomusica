@@ -31,13 +31,12 @@ const productsController = {
       
        //si encuentro un error devuelvo el formulario con los valores cargados y los errores
        if (!errors.isEmpty()){
+            
+            //errores
+            const oldValues = req.body
+            res.render('./products/create', {oldValues, errors: errors.mapped()})     
         
-        //errores
-        const oldValues = req.body
-        res.render('./products/create', {oldValues, errors: errors.mapped()}) 
-
-        return    
-       }
+        }
         db.Producto.create({
             nombre: req.body.nombre,
             precio:req.body.precio,
@@ -51,7 +50,7 @@ const productsController = {
         .catch(function(error){
             res.send(error)
         })
-        },
+    },
     edit: (req, res) => {
             db.Producto.findByPk(req.params.id)
                 .then(product=> {
