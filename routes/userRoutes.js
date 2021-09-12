@@ -8,23 +8,18 @@ const authMiddleware = require('../middlewares/authMiddleware')
 
 // Rutas por GET
 usersRouter.get('/login',guestMiddleware, userController.login)
-
 usersRouter.get('/register',guestMiddleware , userController.register)
-
 usersRouter.get('/contact', userController.contacto)
-
 usersRouter.get('/profile',authMiddleware, userController.profile)
-
-
-//ruta de prueba
-usersRouter.get('/', userController.list)
+usersRouter.get('/logout', userController.logout)
 
 
 // Rutas por POST
 usersRouter.post('/register',userValidation.register,userController.storageUser)
 usersRouter.post('/login', userValidation.validacionLogeo ,userController.logeo)
 
-usersRouter.get('/logout', userController.logout)
+//ruta de prueba
+usersRouter.get('/', userController.list)
 
 usersRouter.get('/session',(req, res)=>{
     res.send(req.session.usuarioLogeado)

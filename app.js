@@ -7,6 +7,7 @@ const userRoutes = require ('./routes/UserRoutes.js')
 const mainRoutes = require ('./routes/mainRoutes.js')
 const session = require('express-session')
 const cookies = require('cookie-parser')
+const apiRoutes = require('./routes/api/mainApiRoutes')
 
 //Middlewares
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
@@ -56,6 +57,8 @@ app.use(logger('dev'));
 app.use('/products', productsRoutes)
 // usuarios
 app.use('/user', userRoutes)
+//API
+app.use('/api', apiRoutes)
 // home
 app.use('/', mainRoutes)
 
