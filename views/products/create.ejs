@@ -9,36 +9,36 @@
                 <div class="division-ppal">
                     <div class="formulario-columna">
 
-
-                    <form action="/products/create" method="POST" class="main-formulario" enctype="multipart/form-data"> 
+                    <form id="form-create" action="/products/create" method="POST" class="main-formulario" enctype="multipart/form-data"> 
 
                         <div class="etiqueta-formulario">
                             <label for="name">Nombre de producto</label>
                             <input type="text" name="nombre" id="name" value="<% locals.oldValues && oldValues.nombre %>"/>
-                            <span class="msg-error"><% locals.errors && errors.nombre ? errors.nombre.msg : "" %> </span>
+                            <span class="msg-error msg-error-nombre"><%= locals.errors && errors.nombre ? errors.nombre.msg : "" %> </span>
                         </div>
                         
                         <div class="etiqueta-formulario">
                             <label for="price">Precio</label>
                             <input type="text" name="precio" id="price" value="<% locals.oldValues && oldValues.precio  %>"/>
-                            <span class="msg-error"><% locals.errors && errors.precio ? errors.name.msg : "" %> </span>
+                            <span class="msg-error msg-error-precio"><%= locals.errors && errors.precio ? errors.precio.msg : "" %> </span>
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="categoria">Categoria</label>
                             <input type="text" name="categoria" id="categoria" value="<% locals.oldValues && oldValues.categoria %>"/>
-                            <span class="msg-error"><% locals.errors && errors.categoria ? errors.categoria.msg : "" %> </span>
+                            <span class="msg-error msg-error-categoria"><%= locals.errors && errors.categoria ? errors.categoria.msg : "" %> </span>
                         </div>
 
-                        <div class="etiqueta-formulario">
+                        <div class="etiqueta-formulario" id="image">
                             <label for="productImage">Imagen</label>
                             <input type="fizle" name="imagen" id="productImage"/>
+                            <span class="msg-error msg-error-image"></span>
                         </div>
 
                         <div class="etiqueta-formulario">
                             <label for="descripcion">Descripcion</label>
                             <input class="descripcion" type="textarea" name="descripcion" id="descripcion" value="<% locals.oldValues && oldValues.descripcion %>"/>
-                            <span class="msg-error"><% locals.errors && errors.descripcion ? errors.categoria.msg : "" %> </span>
+                            <span class="msg-error msg-error-descripcion"><%= locals.errors && errors.descripcion ? errors.categoria.msg : "" %> </span>
                         </div>
 
                         <div class="botones">
@@ -58,6 +58,10 @@
 		</section>
 	</main>
 
-	<%- include('../parcials/footer.ejs') %>
+	<script src="/js/form-validation-create-product.js"></script>
+    <%- include('../parcials/footer.ejs') %>
+
+    
+    </body>
 
 </html>
