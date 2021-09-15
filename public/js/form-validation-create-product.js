@@ -1,15 +1,12 @@
-const { REAL } = require("sequelize/types")
-
 //Guardo mi formulario en una variable
 const form = document.querySelector("#form-create")
-
 const inputName = form.querySelector('#name')
 const inputPrice = form.querySelector('#price')
 const inputCategoria = form.querySelector('#categoria')
 const inputDescripcion = form.querySelector('#descripcion')
-const inputImage = form.querySelector('#inputImage')
+const inputImage = form.querySelector('#producttImage')
 
-//Errores
+
 const errorName = form.querySelector('.msg-error-name')
 const errorPrice = form.querySelector('.msg-error-precio')
 const errorCategoria = form.querySelector('.msg-error-categoria')
@@ -28,24 +25,38 @@ function resetErrors() {
     errorDescripcion = ""
 }
 
-//Paro la ejecucion del formulario
+
 form.addEventListener('submit', (e) => {
+    
+   // let hasErrors = false
+    
+    
 
-    let hasErrors = false
+    //if (hasErrors){
+    e.preventDefault()
+   // }
 
-    resetErrors()
 
-    //nombre
-    if (!inputName.value.length > 3){
-        hasErrors = true
-        errorName.innerHTML = "Ingrese el nombre del producto"
-        inputName.focus()
-    }
 
-    //precio
-    if (!isNumeric(inputPrice.value) || inputPrice.value < 0){
+})
+
+/*
+    if (inputName.value.length < 3){
         
-        errorPrice.innerHTML = "Ingrese un valor mayor a 0"
+        
+        hasErrors = true
+        
+        errorName.innerHTML = "a Ingrese el nombre del producto"
+        inputName.focus()
+      
+       
+    }
+    */
+/*
+    
+    if (!isNumeric(inputPrice.value) || (inputPrice.value < 0)){
+        
+        errorPrice.innerHTML = "a Ingrese un valor mayor a 0"
 
         if(!hasErrors){
         
@@ -54,6 +65,8 @@ form.addEventListener('submit', (e) => {
         }
         hasErrors = true
     }
+
+    
     if (!inputCategoria.value.length > 0){
         
         errorCategoria.innerHTML = "Por favor ingrese la categoria"
@@ -87,8 +100,7 @@ form.addEventListener('submit', (e) => {
         }
         hasErrors = true
     }
-        
-    if (hasErrors){
-    e.preventDefault()
-    }
+    
+    
 })
+*/

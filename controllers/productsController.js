@@ -34,7 +34,7 @@ const productsController = {
             
             //errores
             const oldValues = req.body
-            res.render('./products/create', {oldValues, errors: errors.mapped()})     
+            return res.render('./products/create', {oldValues, errors: errors.mapped()})     
         
         }
         db.Producto.create({

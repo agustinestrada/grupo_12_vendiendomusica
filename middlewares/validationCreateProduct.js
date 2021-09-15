@@ -2,7 +2,7 @@ const { body } = require('express-validator')
 const path = require('path')
 
 const validationCreateProduct = [
-    body('name')
+    body('nombre')
     .notEmpty()
     .withMessage('Por favor ingrese el nombre del producto')
     .isLength({min: 5})
@@ -16,7 +16,7 @@ const validationCreateProduct = [
     .notEmpty()
     .withMessage('Por favor elija una categoria'),
    
-    body('imagen')
+    body('image')
     .custom((value, { req }) => {
         const { file } = req
         //cuequea que haya cargado una imagen
@@ -35,7 +35,9 @@ const validationCreateProduct = [
 
         return true
 
-    }),
+    })
+    .withMessage('Las extensiones soportadas son : .jpg, .jpeg, .gif, o .png')
+    ,
     body('descripcion')
     .notEmpty()
     .withMessage('Por favor ingrese una descripcion del producto')
