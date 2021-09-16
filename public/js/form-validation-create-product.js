@@ -1,5 +1,8 @@
 const { REAL } = require("sequelize/types")
 
+window.addEventListener('load',()=>{
+
+    
 //Guardo mi formulario en una variable
 const form = document.querySelector("#form-create")
 
@@ -91,4 +94,6 @@ form.addEventListener('submit', (e) => {
     if (hasErrors){
     e.preventDefault()
     }
+})
+
 })

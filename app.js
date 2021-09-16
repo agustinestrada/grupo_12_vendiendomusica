@@ -20,6 +20,11 @@ const methodOverride = require('method-override');
 const multer = require('multer')
 // Poder usar PUT PATCH & DELETE
 
+// definimos la arpera que devuelve los archivos estaticos
+app.use(express.static('public'))
+// No olvidarse esto para que la data se envie correctamente desde un formulario
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use(methodOverride('_method'))
 
@@ -36,15 +41,6 @@ app.use(userLoggedMiddleware)
 app.listen(port,() =>{
     console.log('El servidor se inicio correctamente en el puerto ' + port);
 })
-
-// definimos la arpera que devuelve los archivos estaticos
-app.use(express.static('public'))
-// No olvidarse esto para que la data se envie correctamente desde un formulario
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-
-
 
 //view engine setuo
 app.set('view engine', 'ejs')

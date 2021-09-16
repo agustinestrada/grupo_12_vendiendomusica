@@ -2,7 +2,7 @@ const { body } = require('express-validator')
 const path = require('path')
 
 const validationCreateProduct = [
-    body('name')
+    body('nombre')
     .notEmpty()
     .withMessage('Por favor ingrese el nombre del producto')
     .isLength({min: 5})
