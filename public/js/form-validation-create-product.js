@@ -24,8 +24,6 @@ window.addEventListener('load',()=>{
     let hasErrors = false
 
     form.addEventListener('submit', (e) => {
-
-        console.log(inputImage)
             
             
         if (inputName.value.length < 3){
@@ -40,9 +38,9 @@ window.addEventListener('load',()=>{
         }
 
             
-        if (inputPrice.value <= 0 || inputPrice == null || inputPrice == undefined ){
+        if (inputPrice.value <= 0 || inputPrice == null || inputPrice == undefined || isNaN(inputPrice.value) ){
                 
-                errorPrice.innerHTML = "a Ingrese un valor mayor a 0"
+                errorPrice.innerHTML = "a Ingrese un valor mayor numerico mayor a 0"
 
                 if(!hasErrors){
                 
