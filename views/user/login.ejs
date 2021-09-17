@@ -12,11 +12,13 @@
                     
                     <div class="etiqueta-formulario">
                         <label for="user">Email</label>
-                        <input type="text" name="email" id="user">
+                        <input type="text" name="email" class="emaill" id="user">
+                        <span class="msg-error msg-error-email"></span>
                     </div>
                     <div class="etiqueta-formulario">
                         <label for="password">Contraseña</label>
-                        <input type="password" name="clave" id="password">
+                        <input type="password" name="clave" class="passwordd" id="password">
+                        <span class="msg-error msg-error-password"></span>
                     </div>
                     <div class="etiqueta-formulario2">
                         <label for="recordame">Recordame</label>
@@ -31,7 +33,7 @@
                         </button>
                     </div>
             </form>
-
+            <script src="/js/loginValidation.js"></script>
         </section>
     </main>
 
