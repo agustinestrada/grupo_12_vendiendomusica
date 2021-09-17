@@ -29,7 +29,7 @@ productsRouter.get('/create', productsController.create )
 productsRouter.post('/create',upload.single('imagen'),validationCreateProduct, productsController.store )
 //update
 productsRouter.get('/:id/edit', productsController.edit);
-productsRouter.post('/:id',upload.single('imagen'), productsController.update);
+productsRouter.post('/:id',upload.single('imagen'),validationCreateProduct, productsController.update);
 //delete
 productsRouter.delete('/:id', productsController.destroy)
 //Buscador
