@@ -3,62 +3,62 @@
 <body>
 	<%- include('../parcials/header.ejs') %>
 
-	<main>
-		<section class="main-contenedor">
-			<div class="titulo"><h1>Subi tu producto</h1></div>
-                <div class="division-ppal">
-                    <div class="formulario-columna">
+<main>
+    <section class="main-contenedor">
+        <div class="titulo"><h1>Subi tu producto</h1></div>
+            <div class="division-ppal">
+                <div class="formulario-columna">
 
-                    <form id="form-create" action="/products/create" method="POST" class="main-formulario" enctype="multipart/form-data"> 
+                <form id="form-create" action="/products/create" method="POST" class="main-formulario" enctype="multipart/form-data"> 
 
-                        <div class="etiqueta-formulario">
-                            <label for="name">Nombre de producto</label>
-                            <input type="text" name="nombre" id="name" value="<% locals.oldValues && oldValues.nombre %>"/>
-                            <span class="msg-error msg-error-nombre"><%= locals.errors && errors.nombre ? errors.nombre.msg : "" %> </span>
-                        </div>
-                        
-                        <div class="etiqueta-formulario">
-                            <label for="price">Precio</label>
-                            <input type="text" name="precio" id="price" value="<% locals.oldValues && oldValues.precio  %>"/>
-                            <span class="msg-error msg-error-precio"><%= locals.errors && errors.precio ? errors.precio.msg : "" %> </span>
-                        </div>
-
-                        <div class="etiqueta-formulario">
-                            <label for="categoria">Categoria</label>
-                            <input type="text" name="categoria" id="categoria" value="<% locals.oldValues && oldValues.categoria %>"/>
-                            <span class="msg-error msg-error-categoria"><%= locals.errors && errors.categoria ? errors.categoria.msg : "" %> </span>
-                        </div>
-
-                        <div class="etiqueta-formulario" id="image">
-                            <label for="productImage">Imagen</label>
-                            <input type="file" name="imagen" id="productImage"/>
-                            <span class="msg-error msg-error-image"><%= locals.errors && errors.imagen ? errors.imagen.msg : "" %></span>
-                        </div>
-
-                        <div class="etiqueta-formulario">
-                            <label for="descripcion">Descripcion</label>
-                            <input class="descripcion" type="textarea" name="descripcion" id="descripcion" value="<% locals.oldValues && oldValues.descripcion %>"/>
-                            <span class="msg-error msg-error-descripcion"><%= locals.errors && errors.descripcion ? errors.descripcion.msg : "" %> </span>
-                        </div>
-
-                        <div class="botones">
-                            <button type="submit" class="boton">
-                                Crear producto
-                            </button>
-                            <button type="reset" class="boton">
-                                Borrar
-                            </button>
-                        </div>
-                    </form>
+                    <div class="etiqueta-formulario">
+                        <label for="name">Nombre de producto</label>
+                        <input type="text" name="nombre" id="name" class="nombre" value="<% locals.oldValues && oldValues.nombre %>"/>
+                        <span class="msg-error msg-error-nombre"><%= locals.errors && errors.nombre ? errors.nombre.msg : "" %> </span>
                     </div>
-                    <div class="imagen">
-                        <img src="/img/productCreate/woocom-pro1.png" alt="">
+                    
+                    <div class="etiqueta-formulario">
+                        <label for="price">Precio</label>
+                        <input type="text" name="precio" id="price" class="precio" value="<% locals.oldValues && oldValues.precio  %>"/>
+                        <span class="msg-error msg-error-precio"><%= locals.errors && errors.precio ? errors.precio.msg : "" %> </span>
                     </div>
+
+                    <div class="etiqueta-formulario">
+                        <label for="categoria">Categoria</label>
+                        <input type="text" name="categoria" id="categoria" class="categoria" value="<% locals.oldValues && oldValues.categoria %>"/>
+                        <span class="msg-error msg-error-categoria"><%= locals.errors && errors.categoria ? errors.categoria.msg : "" %> </span>
+                    </div>
+
+                    <div class="etiqueta-formulario" id="image">
+                        <label for="productImage">Imagen</label>
+                        <input type="file" name="imagen" id="productImage" />
+                        <span class="msg-error msg-error-image"><%= locals.errors && errors.imagen ? errors.imagen.msg : "" %></span>
+                    </div>
+
+                    <div class="etiqueta-formulario">
+                        <label for="descripcion">Descripcion</label>
+                        <input class="descripcion" type="textarea" name="descripcion" id="descripcion" value="<% locals.oldValues && oldValues.descripcion %>"/>
+                        <span class="msg-error msg-error-descripcion"><%= locals.errors && errors.descripcion ? errors.descripcion.msg : "" %> </span>
+                    </div>
+
+                    <div class="botones">
+                        <button type="submit" class="boton">
+                            Crear producto
+                        </button>
+                        <button type="reset" class="boton">
+                            Borrar
+                        </button>
+                    </div>
+                </form>
                 </div>
-		</section>
-	
-        <script src="/js/form-validation-create-product.js"></script>
-    </main>
+                <div class="imagen">
+                    <img src="/img/productCreate/woocom-pro1.png" alt="">
+                </div>
+            </div>
+    </section>
+
+    <script src="/js/form-validation-create-product.js"></script>
+</main>
 
 	    <%- include('../parcials/footer.ejs') %>
 
