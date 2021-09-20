@@ -18,10 +18,16 @@ let userController = {
         res.render('./user/contact')
     },
     
-    storageUser:(req, res) => {
+    storageUser: (req, res) => {
+        
         let errores = validationResult(req)
 
         let passHash = bcrypt.hashSync(req.body.clave, 10)
+
+       if(!req.file.filename){
+            req.file.filename = 'defaults.jpg'
+        }
+
 
         if(errores.isEmpty()){
             //construir un nuevo usuario tomando los campos que lleno el cliente
@@ -29,7 +35,8 @@ let userController = {
                 nombre:req.body.nombre ,
                 apellido: req.body.apellido,
                 email: req.body.email,
-                passwords: passHash
+                passwords: passHash,
+                imagen: req.file.filename
             })
             .then(res.redirect('/user'))
         }else{
@@ -40,14 +47,14 @@ let userController = {
         }    
     },
 
-    logeo:(req, res) => {
+    logeo:async(req, res) => {
         
         let errores = validationResult(req)
         
         if(errores.isEmpty()){
             let email = req.body.email
 
-            req.session.usuarioLogeado = email
+            req.session.usuarioLogeado = await db.Usuarios.findOne({where:{email}})
 
             if (req.body.recordame) {
                 
@@ -77,10 +84,8 @@ let userController = {
         res.redirect('/')
     },
     profile: async(req, res)=>{
-        console.log(req.cookies.emailUsuario);
-        let perfilUsuario = await db.Usuarios.findOne({where:{email: req.session.usuarioLogeado}})
-           
-            console.log(perfilUsuario)
+
+        let perfilUsuario = await db.Usuarios.findOne({where:{email: req.session.usuarioLogeado.email}})
 
         res.render('./user/profile',{perfilUsuario} )
     }

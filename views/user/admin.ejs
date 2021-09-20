@@ -1,0 +1,22 @@
+
+<%- include('../parcials/head.ejs') %>
+
+<link rel="stylesheet" href="/css/register.css">
+
+<body>
+	<%- include('../parcials/header.ejs') %>
+
+    <h1>Listado de usuarios</h1>
+    <ul>
+        <% for (let i=0; i < lista.length; i++) { %> 
+            <li>
+                <%= lista[i].apellido %> 
+            </li>
+        <% } %> 
+    </ul>
+
+	<%- include('../parcials/footer.ejs') %>
+
+    
+</body>
+</html>

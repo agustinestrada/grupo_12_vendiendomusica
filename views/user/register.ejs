@@ -8,7 +8,7 @@
 	<main>
 		<section class="main-contenedor">
 			<div><h1>Registrate</h1></div>
-			<form action="/user/register" method="POST" class="main-formulario"> 
+			<form action="/user/register" method="POST" class="main-formulario" enctype="multipart/form-data"> 
 				<% if(locals.errors){ 
 					 errors.forEach(error => { %>
 					<p><%= error.msg  %> </p>
@@ -44,6 +44,12 @@
 						<label for="confirm-password">Confirmar Contraseña</label>
 						<input type="password" name="re-clave" class="password2" id="confirm-password">
 						<span class="msg-error msg-error-password2"></span>
+					</div>
+
+					<div class="etiqueta-formulario">
+						<label for="profilePic">Imagen de perfil</label>
+						<input type="file" name="profilePic" class="profilePic" id="profilePic">
+						<span class="msg-error msg-error-profilePic"></span>
 					</div>
 
 					<div class="etiqueta-formulario">

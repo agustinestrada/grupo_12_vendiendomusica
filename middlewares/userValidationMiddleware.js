@@ -35,10 +35,34 @@ module.exports = {
                     }
                     
                 }
-            ),
+            )
+            ,
         body('clave')
             .isLength({min:4})
             .withMessage('la contraseña es demasiado corta')
+            ,
+        body('profilePic')
+        .custom((value, { req }) => {
+            const { file } = req
+            //cuequea que haya cargado una imagen
+            if (!file) {
+                    
+            throw new Error('Seleccione un archivo')
+            }
+            //cuequea que la extension sea la correcta
+            
+            const AVIABLE_EXTENSIONS = ['.jpg', '.jpeg', '.gif', '.png']
+            const extension = path.extname(file.originalname)
+            
+            if (!AVIABLE_EXTENSIONS.includes(extension)){ 
+                throw new Error ('Las extensiones soportadas son : .jpg, .jpeg, .gif, o .png')
+            }
+    
+            return true
+    
+        })
+        .withMessage('Las extensiones soportadas son : .jpg, .jpeg, .gif, o .png')
+        ,
     ],
     validacionLogeo: [
         body('email')

@@ -14,6 +14,7 @@
         <% if(locals.isLogged){ %> 
 
             <section class="botones">
+               <img src="/img/profileIMG/<%= locals.isLogged.imagen %>" class="imagen-profile-header" alt="">
                 <button class="ingresa"><a href="/user/profile">Perfil</a></button>
                 <button class="registrate"><a href="/user/logout">Salir</a></button>
             </section>
