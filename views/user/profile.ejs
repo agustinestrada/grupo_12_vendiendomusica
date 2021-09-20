@@ -6,11 +6,12 @@
     <main>
         <section>
             <div >
-                <h1>Hola <%= perfilUsuario.nombre  %></h1>
-                <img src="/img/profileIMG/<%= perfilUsuario.imagen %> " alt="">
-            
+                <img src="/img/profileIMG/<%= perfilUsuario.imagen %> " class="perfil" alt="">            
             </div>
-
+            <div>
+                <h1>Hola <%= perfilUsuario.nombre + ' ' +  perfilUsuario.apellido %></h1>
+                <h2><%= perfilUsuario.email %> </h2>
+            </div>
 
             
         </section>
