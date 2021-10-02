@@ -14,12 +14,11 @@ const productsController = {
                 res.render('./products/Detail', {producto})
             })
     },
-    list: (req,res) => {
-        db.Producto.findAll()
-            .then(function(productList){
-                res.render('./products/list', { productList })
-                    }
-                )    
+    list:async (req,res) => {
+        
+        let productList = await db.Producto.findAll()
+
+        res.render('./products/list', { productList })  
     },
     create: (req,res) => {
         res.render('./products/create') 

@@ -2,7 +2,6 @@ const {Producto} = require('../../database/models/index')
 
 module.exports = {
     list: async(req,res)=>{
-        let listadoProductos = await Producto.findAll()
         let totalProductos = await Producto.findAndCountAll()
 
         res.send({
@@ -10,7 +9,7 @@ module.exports = {
                 total: totalProductos.count
             },
             data:{
-                listadoProductos
+                productos: totalProductos.rows
             }
         })
     },
