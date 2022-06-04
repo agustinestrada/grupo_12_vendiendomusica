@@ -18,6 +18,8 @@ const productsController = {
         
         let productList = await db.Producto.findAll()
 
+        console.log(productList);
+
         res.render('./products/list', { productList })  
     },
     create: (req,res) => {
